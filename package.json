@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A web portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp-sass": "^2.1.1",
+    "trash": "^3.4.1",
+    "trianglify": "^0.4.0"
+  },
+  "devDependencies": {
+    "jquery": "^2.1.4"
+  },
+  "author": "Clark Nelson",
+  "license": "ISC"
+}

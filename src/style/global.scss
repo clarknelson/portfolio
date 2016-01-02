@@ -1,0 +1,36 @@
+body{
+  font-family: "Saturn", "Manifold", sans-serif;
+  line-height: 1.50em;
+  color: $dark-blue;
+  background: $background;
+}
+
+p{
+  //font-family: "Manifold", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Manifold Display", sans-serif;
+  font-weight: 900;
+}
+body,h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li{
+  line-height: 1.75em;
+}
+
+a{
+  text-decoration: none;
+  color: $light-blue;
+  transition: all 0.1s ease-in;
+
+  &:hover{
+    color: $blue;
+  }
+}
