@@ -6,6 +6,7 @@ var home = {
 
     // add more color options
     // http://bl.ocks.org/mbostock/5577023
+    // YlOrRd
     var cellSize = 102;
     var pattern = Trianglify({
       // api options
@@ -13,7 +14,7 @@ var home = {
       width: window.innerWidth,
       height: window.innerHeight,
       cell_size: cellSize,
-      x_colors: "YlOrRd"
+      //x_colors: "Blues"
     });
     $("#mainHeader").append(pattern.canvas());
   },

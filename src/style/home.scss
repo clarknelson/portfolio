@@ -63,9 +63,9 @@
 .container{
   position: relative;
   color: white;
-  padding: 50px;
   padding-top: 100vh;
   opacity: 0;
+  width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 
@@ -108,10 +108,6 @@
 
 .about{
   padding-top: 102px;
-  top: 0;
-  position: relative;
-  width: 1000px;
-
 
   .item{
     margin-top: 25px;
@@ -122,9 +118,31 @@
     }
 
     ul{
-      list-style: lower-latin;
       padding-left: 25px;
       margin-top: 15px;
+    }
+    li{
+      line-height: 1.25em;
+      padding-bottom: 6px;
+    }
+    .experience.list{
+      list-style: lower-latin;
+    }
+    .education.list{
+      list-style: upper-latin;
+
+      ul{
+        margin-top: 6px;
+        padding-left: 20px;
+        list-style: circle;
+        font-size: 14px;
+        line-height: 1em;
+      }
+    }
+  }
+  .right{
+    @media screen and (max-width: 800px){
+      display: none;
     }
   }
 }
@@ -133,6 +151,9 @@
   .grid.item{
     border-left: 1px solid hsla(0,100%,100%, 0.3);
 
+    @media screen and (max-width: 800px){
+      flex-direction: column-reverse;
+    }
     .left{
       margin-right: 0;
       padding-left: 25px;
@@ -154,6 +175,14 @@
       }
     }
     .right{
+      img{
+        @media screen and (max-width: 800px){
+          $size: 250px;
+          height: $size;
+          width: $size;
+          margin-bottom: 10px;
+        }
+      }
 
     }
   }
@@ -190,10 +219,27 @@
 .process{
   .section-desc{
     max-width: 61.5385%;
+    @media screen and (max-width: 800px){
+      max-width: 100%;
+    }
   }
 
   .grid.item{
     margin-top: 40px;
+    @media screen and (max-width: 800px){
+      flex-direction: column-reverse;
+    }
+    .right{
+      @media screen and (max-width: 800px){
+        margin-left: 0;
+        margin-bottom: 25px;
+      }
+    }
+    .left{
+      @media screen and (max-width: 800px){
+        margin-left: 0;
+      }
+    }
 
     .headline{
       font-size: 20px;
