@@ -4,15 +4,16 @@ var home = {
 
   createPattern: function(){
 
-    // add more color options
-    // http://bl.ocks.org/mbostock/5577023
-    // YlOrRd
-    // OrRd
-    // YlOrBr
-    // Reds
-    //// Oranges
-    //// Greys
-    // Spectral
+    // more options: http://bl.ocks.org/mbostock/5577023
+    var colors = [
+      'YlOrRd',
+      'YlOrBr',
+      'Greys',
+      'Spectral'
+    ];
+    var xColor = Math.floor(Math.random() * colors.length);
+    console.log();
+
     var cellSize = 102;
     var pattern = Trianglify({
       // api options
@@ -20,8 +21,11 @@ var home = {
       width: window.innerWidth,
       height: window.innerHeight,
       cell_size: cellSize,
-      x_colors: "YlOrRd"
+      x_colors: colors[xColor]
     });
+
+    // take out the old canvas
+    $("#mainHeader canvas").remove()
     $("#mainHeader").append(pattern.canvas());
   },
 
@@ -100,6 +104,13 @@ var home = {
     });
   },
 
+  resizeListener: function(){
+    var _this = this;
+    $(window).resize(function(){
+      _this.createPattern();
+    });
+  },
+
 
   init: function(){
     this.createPattern();
@@ -109,6 +120,7 @@ var home = {
     this.setSectionIndex();
     this.updateContactName();
     this.flag();
+    this.resizeListener();
   }
 }
 
