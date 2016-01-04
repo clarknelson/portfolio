@@ -1,12 +1,18 @@
 var home = {
 
-  headerHeight: 130,
+  headerHeight: 140,
 
   createPattern: function(){
 
     // add more color options
     // http://bl.ocks.org/mbostock/5577023
     // YlOrRd
+    // OrRd
+    // YlOrBr
+    // Reds
+    //// Oranges
+    //// Greys
+    // Spectral
     var cellSize = 102;
     var pattern = Trianglify({
       // api options
@@ -14,7 +20,7 @@ var home = {
       width: window.innerWidth,
       height: window.innerHeight,
       cell_size: cellSize,
-      //x_colors: "Blues"
+      x_colors: "YlOrRd"
     });
     $("#mainHeader").append(pattern.canvas());
   },
@@ -48,24 +54,6 @@ var home = {
     });
   },
 
-  lockSectionScroll: function(){
-    var _this = this;
-    var offsets = [];
-    $("section").each(function(){
-      console.log($(this));
-      offsets.push($(this).offset().top + $(this).innerHeight());
-    });
-    //console.log(offsets);
-    var offsetTop = $("section.about").offset().top;
-    $(window).on('scroll', function(e){
-      //console.log(window.scrollY);
-      offsets.every(function(el, i, arr){
-        //console.log(el, arr);
-        return window.scrollY > el;
-      });
-    });
-  },
-
   expandPhoto: function(){
     $(".photo").on('click', function(){
       var $self = $(this);
@@ -88,13 +76,39 @@ var home = {
     });
   },
 
+  setSectionIndex: function(){
+    var index = 0;
+    $('.container section').each(function(i){
+      if($(this).css('display') === "none"){
+        return;
+      }
+      $(this).find("header h4 span").text("0" + index);
+      index++;
+    });
+  },
+
+  updateContactName: function(){
+    $('.contact .name').on('change', function(){
+      var newValue = $('.contact textarea').text().replace("John Doe", this.value);
+      $('.contact textarea').text(newValue);
+    });
+  },
+  flag: function(){
+    $('.credits .flag').on('click', function(){
+      $(this).toggleClass('active');
+      $(this).toggleClass('inactive');
+    });
+  },
+
 
   init: function(){
     this.createPattern();
     this.headerScrollListener();
     this.contentOpacityScroll();
-    this.lockSectionScroll();
     this.expandPhoto();
+    this.setSectionIndex();
+    this.updateContactName();
+    this.flag();
   }
 }
 

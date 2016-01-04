@@ -17,7 +17,11 @@ gulp.task('scss', function() {
 
 gulp.task('imgs', function(){
   return gulp.src('src/imgs/**/*')
-        .pipe(imagemin({ use: [pngquant(), imageminSvgo(), imageminJpegtran()] }))
+        .pipe(imagemin({
+          optimizationLevel: 5,
+          progressive: true,
+          use: [pngquant(), imageminSvgo(), imageminJpegtran()]
+        }))
         .pipe(gulp.dest('dist/imgs'));
 });
 

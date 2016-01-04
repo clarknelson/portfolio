@@ -1,14 +1,12 @@
 #mainHeader{
   position: fixed;
   top: 0;
-
   width: 100%;
   height: 100vh;
-
   overflow: hidden;
   z-index: 20;
-  border-bottom: 5px solid white;
-
+  border-bottom: 4px solid white;
+  box-shadow: 0px 4px 20px hsla(0,0%,15%,0.8);
   .grid{
     position: absolute;
     top: 50%;
@@ -17,38 +15,46 @@
 
     display: flex;
     align-items: center;
+
     width: 90%;
-    max-width: 1000px;
+    max-width: 980px;
     padding: 0 50px;
     transform: translate(-50%, -50%);
-
   }
+
   .text{
-    flex: 1 1 61.5385%;
+    flex: 1 1 61%;
     margin-right: 25px;
     h1{
       font-size: 32px;
-      font-weight: 400;
+      font-weight: 300;
       letter-spacing: 1px;
-      line-height: 1em;
+
     }
     p{
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 400;
-      padding: 15px 1px 0;
-      line-height: 1em;
+      line-height: 1.2em;
+      padding: 6px 1px 0;
     }
   }
 
   .soundcloud{
-    $height: 100px;
-    height: $height;
-    flex: 1 1 38.4615%;
+    $height: 150px;
+    height: $height - 30px;
+    flex: 1 1 38%;
     margin-left: 25px;
     opacity: 0;
+    overflow: hidden;
+    border-radius: 2px;
 
     iframe{
       height: $height;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 600px){
+      display: none;
     }
   }
 
@@ -66,7 +72,7 @@
   padding-top: 100vh;
   opacity: 0;
   width: 90%;
-  max-width: 1000px;
+  max-width: 980px;
   margin: 0 auto;
 
   section{
@@ -86,15 +92,25 @@
     .grid{
       display: flex;
       margin-bottom: 40px;
-
+      @media screen and (max-width: 800px){
+        flex-direction: column;
+      }
       .left{
         flex: 1 1 61.5385%;
         margin-right: 25px;
+
+        @media screen and (max-width: 800px){
+          margin-right: 0;
+        }
       }
       .right{
         flex: 1 1 38.4615%;
         margin-left: 25px;
 
+        @media screen and (max-width: 800px){
+          margin-left: 0;
+          margin-top: 25px;
+        }
         img{
           width: 100%;
           box-shadow: 0 2px 8px hsla(0,0%,10%,0.4);
@@ -106,15 +122,17 @@
   }
 }
 
+
 .about{
-  padding-top: 102px;
+  padding-top: 25%;
 
   .item{
     margin-top: 25px;
 
     h3{
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 400;
+      letter-spacing: 1px;
     }
 
     ul{
@@ -122,8 +140,8 @@
       margin-top: 15px;
     }
     li{
-      line-height: 1.25em;
-      padding-bottom: 6px;
+      line-height: 1.4em;
+      padding: 3px;
     }
     .experience.list{
       list-style: lower-latin;
@@ -159,19 +177,24 @@
       padding-left: 25px;
 
       .website-name{
-        font-size: 28px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 400;
         letter-spacing: 1px;
       }
       .website-link{
         display: block;
-        margin-top: 10px;
+        margin-top: 6px;
       }
       .website-description{
-        margin: 15px 0;
+        margin: 10px 0;
+        line-height: 1.4em;
       }
       .website-details{
-        padding-left: 15px;
+        padding: 5px 10px;
+
+        li{
+          line-height: 1.2em;
+        }
       }
     }
     .right{
@@ -181,6 +204,7 @@
           height: $size;
           width: $size;
           margin-bottom: 10px;
+          padding-left: 25px;
         }
       }
 
@@ -189,7 +213,9 @@
 }
 
 .photography{
-
+  @media screen and (max-width: 800px){
+    display: none;
+  }
   .photo{
     position: relative;
     height: 102px;
@@ -226,24 +252,167 @@
 
   .grid.item{
     margin-top: 40px;
-    @media screen and (max-width: 800px){
-      flex-direction: column-reverse;
-    }
-    .right{
-      @media screen and (max-width: 800px){
-        margin-left: 0;
-        margin-bottom: 25px;
-      }
-    }
-    .left{
-      @media screen and (max-width: 800px){
-        margin-left: 0;
-      }
-    }
+
 
     .headline{
       font-size: 20px;
       margin-bottom: 6px;
+    }
+  }
+}
+
+.contact{
+  .left{
+    h3{
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    p{
+      //margin-bottom: 15px;
+      padding: 4px 1px 15px;
+    }
+
+    label{
+      display: flex;
+      padding: 2px;
+      span{
+        flex: 0 0 20%;
+      }
+      input{
+        flex: 0 0 80%;
+      }
+    }
+
+    textarea{
+      width: 100%;
+      height: auto;
+      font-size: 16px;
+      line-height: 1.3em;
+      cursor: pointer;
+      margin-top: 10px;
+      box-sizing: border-box;
+      background: lighten($dark-blue, 2%);
+      padding: 6px 10px;
+      border: 1px solid lighten($dark-blue, 10%);
+
+      &:focus{
+        cursor: inherit;
+
+      }
+    }
+
+  }
+  .right{
+    .icon-grid{
+      display: flex;
+      margin: 6px 0;
+      margin-left: -3px;
+    }
+    .item{
+      &:hover{
+        path{
+          fill: $blue;
+        }
+      }
+    }
+    .instagram{
+    }
+    svg{
+      width: 32px;
+      path{
+        transition: all 0.1s;
+      }
+    }
+  }
+}
+
+.credits{
+
+  .active.flag{
+    .flag-background{
+      padding-bottom: 62%;
+    }
+    .flag-line{
+      height: 15%;
+
+      &:nth-of-type(1){
+        top: 25%;
+      }
+      &:nth-of-type(2){
+        top: 75%;
+      }
+    }
+    .flag-stars{
+      padding: 0 15%;
+    }
+    footer{
+      opacity: 0.75;
+    }
+  }
+  .inactive.flag{
+    .flag-background{
+      padding-bottom: 25%;
+    }
+    .flag-line{
+      height: 14%;
+
+      &:nth-of-type(1){
+        top: 18%;
+      }
+      &:nth-of-type(2){
+        top: 82%;
+      }
+    }
+
+    .flag-stars{
+      padding: 0 28%;
+    }
+
+    footer{
+      opacity: 0;
+    }
+  }
+
+  .flag footer{
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .flag-background{
+    position: relative;
+    background: white;
+    width: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    .flag-line{
+      position: absolute;
+      transition: all 0.2s;
+      transform: translateY(-50%);
+      width: 100%;
+      background: lightblue;
+      z-index: 100;
+    }
+
+    .flag-stars{
+      display: flex;
+      justify-content: space-between;
+      z-index: 200;
+      padding: 0 10%;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.2s;
+      box-sizing: border-box;
+
+      svg{
+        flex: 0 1 18%;
+
+        path{
+          fill: red;
+        }
+      }
     }
   }
 }

@@ -1,8 +1,10 @@
 body{
   font-family: "Saturn", "Manifold", sans-serif;
-  line-height: 1.50em;
   color: $dark-blue;
   background: $background;
+}
+*{
+  line-height: 1.6em;
 }
 
 p{
@@ -12,6 +14,7 @@ p{
 h1,h2,h3,h4,h5,h6{
   font-family: "Manifold Display", sans-serif;
   font-weight: 900;
+  line-height: 1.1em;
 }
 body,h1,h2,h3,h4,h5,h6,p{
   margin: 0;
@@ -31,6 +34,18 @@ a{
   transition: all 0.1s ease-in;
 
   &:hover{
-    color: $blue;
+    color: lighten($blue, 20%);
   }
+}
+
+input, textarea{
+  background: transparent;
+  border: none;
+  font-family: "Saturn", "Manifold", sans-serif;
+  font-size: 16px;
+  color: white;
+  outline: none;
+}
+textarea{
+  padding: 0;
 }
