@@ -326,6 +326,9 @@ textarea {
 .contact .right .item:hover path {
   fill: #3B4B7F; }
 
+.contact .right .twitter {
+  margin-right: 3px; }
+
 .contact .right svg {
   width: 32px; }
   .contact .right svg path {
