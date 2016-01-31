@@ -318,21 +318,15 @@ textarea {
   .contact .left textarea:focus {
     cursor: inherit; }
 
-.contact .right .icon-grid {
-  display: flex;
-  margin: 6px 0;
-  margin-left: -3px; }
-
-.contact .right .item:hover path {
-  fill: #3B4B7F; }
-
-.contact .right .twitter {
-  margin-right: 3px; }
-
-.contact .right svg {
-  width: 32px; }
-  .contact .right svg path {
-    transition: all 0.1s; }
+.contact .right {
+  display: block; }
+  .contact .right .icon-grid {
+    margin: 6px 0;
+    margin-left: -3px; }
+  .contact .right .item {
+    display: block; }
+    .contact .right .item:hover {
+      color: #3B4B7F; }
 
 .credits .active.flag .flag-background {
   padding-bottom: 62%; }

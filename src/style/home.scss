@@ -310,25 +310,15 @@
 
   }
   .right{
+    display: block;
     .icon-grid{
-      display: flex;
       margin: 6px 0;
       margin-left: -3px;
     }
     .item{
+      display: block;
       &:hover{
-        path{
-          fill: $blue;
-        }
-      }
-    }
-    .twitter{
-      margin-right: 3px;
-    }
-    svg{
-      width: 32px;
-      path{
-        transition: all 0.1s;
+        color: $blue;
       }
     }
   }
