@@ -62,15 +62,18 @@
 
 body {
   font-family: "Saturn", "Manifold", sans-serif;
-  color: #262729;
-  background: #262729; }
+  color: #222426;
+  background: #222426; }
 
 * {
-  line-height: 1.6em; }
+  line-height: 1.65em; }
+
+p {
+  font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manifold Display", sans-serif;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.1em; }
 
 body, h1, h2, h3, h4, h5, h6, p {
@@ -211,9 +214,9 @@ textarea {
       line-height: 1.4em;
       padding: 3px; }
     .about .item .experience.list {
-      list-style: lower-latin; }
-    .about .item .education.list {
       list-style: upper-latin; }
+    .about .item .education.list {
+      list-style: lower-latin; }
       .about .item .education.list ul {
         margin-top: 6px;
         padding-left: 20px;
@@ -261,8 +264,7 @@ textarea {
   position: relative;
   height: 102px;
   overflow: hidden;
-  border-radius: 2px;
-  border: 1px solid white;
+  box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.5);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   margin-bottom: 25px; }
@@ -312,9 +314,9 @@ textarea {
   cursor: pointer;
   margin-top: 10px;
   box-sizing: border-box;
-  background: #2b2c2e;
+  background: #262a2b;
   padding: 6px 10px;
-  border: 1px solid #3f4043; }
+  border: 1px solid #3a3e41; }
   .contact .left textarea:focus {
     cursor: inherit; }
 
@@ -327,6 +329,12 @@ textarea {
     display: block; }
     .contact .right .item:hover {
       color: #3B4B7F; }
+
+.credits .left h3 {
+  margin-bottom: 5px; }
+
+.credits .left strong {
+  font-weight: 300; }
 
 .credits .active.flag .flag-background {
   padding-bottom: 62%; }

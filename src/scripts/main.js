@@ -1,6 +1,6 @@
 var home = {
 
-  headerHeight: 140,
+  headerHeight: 90,
 
   createPattern: function(){
 
