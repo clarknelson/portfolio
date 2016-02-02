@@ -89,7 +89,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #A5AAB6;
+  color: #9fabc6;
   transition: all 0.1s ease-in; }
   a:hover {
     color: #677bb9; }
@@ -228,7 +228,7 @@ textarea {
       display: none; } }
 
 .work .grid.item {
-  border-left: 1px solid rgba(255, 255, 255, 0.3); }
+  border-left: 1px solid rgba(238, 241, 246, 0.5); }
   @media screen and (max-width: 800px) {
     .work .grid.item {
       flex-direction: column-reverse; } }
@@ -236,8 +236,8 @@ textarea {
     margin-right: 0;
     padding-left: 25px; }
     .work .grid.item .left .website-name {
-      font-size: 24px;
-      font-weight: 400;
+      font-size: 21px;
+      font-weight: 300;
       letter-spacing: 1px; }
     .work .grid.item .left .website-link {
       display: block;
@@ -291,8 +291,8 @@ textarea {
     margin-bottom: 6px; }
 
 .contact .left h3 {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 21px;
+  font-weight: 300;
   letter-spacing: 1px; }
 
 .contact .left p {
@@ -319,12 +319,16 @@ textarea {
   border: 1px solid #3a3e41; }
   .contact .left textarea:focus {
     cursor: inherit; }
+  .contact .left textarea::-webkit-scrollbar {
+    display: none; }
 
 .contact .right {
   display: block; }
   .contact .right .icon-grid {
     margin: 6px 0;
     margin-left: -3px; }
+  .contact .right li {
+    list-style: lower-latin; }
   .contact .right .item {
     display: block; }
     .contact .right .item:hover {

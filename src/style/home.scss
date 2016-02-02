@@ -167,8 +167,7 @@
 
 .work{
   .grid.item{
-    border-left: 1px solid hsla(0,100%,100%, 0.3);
-
+    border-left: 1px solid hsla(hue($light-blue),30%,95%, 0.5);
     @media screen and (max-width: 800px){
       flex-direction: column-reverse;
     }
@@ -177,8 +176,8 @@
       padding-left: 25px;
 
       .website-name{
-        font-size: 24px;
-        font-weight: 400;
+        font-size: 21px;
+        font-weight: 300;
         letter-spacing: 1px;
       }
       .website-link{
@@ -269,8 +268,8 @@
 .contact{
   .left{
     h3{
-      font-size: 22px;
-      font-weight: 400;
+      font-size: 21px;
+      font-weight: 300;
       letter-spacing: 1px;
     }
     p{
@@ -303,7 +302,9 @@
 
       &:focus{
         cursor: inherit;
-
+      }
+      &::-webkit-scrollbar{
+        display: none;
       }
     }
 
@@ -313,6 +314,10 @@
     .icon-grid{
       margin: 6px 0;
       margin-left: -3px;
+    }
+
+    li{
+      list-style: lower-latin;
     }
     .item{
       display: block;
