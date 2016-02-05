@@ -7,9 +7,9 @@ var home = {
     // more options: http://bl.ocks.org/mbostock/5577023
     var colors = [
       'YlOrRd',
-      'YlOrBr',
-      'Greys',
-      'Spectral'
+      //'YlOrBr',
+      //'Greys',
+      //'Spectral'
     ];
     var xColor = Math.floor(Math.random() * colors.length);
     console.log();
@@ -91,7 +91,7 @@ var home = {
     });
   },
 
-  // taken from stack overflow
+  // more user friendly <textarea></textarea>
   // http://stackoverflow.com/questions/6140632/how-to-handle-tab-in-textarea
   convertTab: function(){
     $(".contact textarea").keydown(function(e) {
