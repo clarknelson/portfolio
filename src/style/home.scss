@@ -14,9 +14,7 @@
     left: 50%;
     z-index: 100;
 
-    display: flex;
     align-items: center;
-
     width: 90%;
     max-width: 980px;
     padding: 0 50px;
@@ -24,8 +22,6 @@
   }
 
   .text{
-    flex: 1 1 61%;
-    margin-right: 25px;
     h1{
       font-size: 32px;
       font-weight: 300;
@@ -39,22 +35,20 @@
     }
   }
 
-  .soundcloud{
-    $height: 150px;
-    height: $height - 30px;
-    flex: 1 1 38%;
-    margin-left: 25px;
+  .menu{
     opacity: 0;
-    overflow: hidden;
-    border-radius: 2px;
+    text-align: right;
+    span{
+      color: $dark-blue;
+      display: block;
+      line-height: 125%;
+      font-weight: 500;
+      opacity: 0.75;
+      cursor: pointer;
 
-    iframe{
-      height: $height;
-      width: 100%;
-    }
-
-    @media screen and (max-width: 600px){
-      display: none;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
 
@@ -89,35 +83,35 @@
         margin-bottom: 6px;
       }
     }
-    .grid{
-      display: flex;
-      margin-bottom: 40px;
-      @media screen and (max-width: 800px){
-        flex-direction: column;
-      }
-      .left{
-        flex: 1 1 61.5385%;
-        margin-right: 25px;
+  }
+}
+.grid{
+  display: flex;
+  margin-bottom: 40px;
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+  }
+  .left{
+    flex: 0 0 61.5385%;
+    margin-right: 25px;
 
-        @media screen and (max-width: 800px){
-          margin-right: 0;
-        }
-      }
-      .right{
-        flex: 1 1 38.4615%;
-        margin-left: 25px;
+    @media screen and (max-width: 800px){
+      margin-right: 0;
+    }
+  }
+  .right{
+    flex: 0 0 38.4615%;
+    margin-left: 25px;
 
-        @media screen and (max-width: 800px){
-          margin-left: 0;
-          margin-top: 25px;
-        }
-        img{
-          width: 100%;
-          box-shadow: 0 2px 8px hsla(0,0%,10%,0.4);
-          transition: all 0.2s;
+    @media screen and (max-width: 800px){
+      margin-left: 0;
+      margin-top: 25px;
+    }
+    img{
+      width: 100%;
+      box-shadow: 0 2px 8px hsla(0,0%,10%,0.4);
+      transition: all 0.2s;
 
-        }
-      }
     }
   }
 }
@@ -311,6 +305,7 @@
   }
   .right{
     display: block;
+
     .icon-grid{
       margin: 6px 0;
       margin-left: -3px;
