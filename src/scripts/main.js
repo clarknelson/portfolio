@@ -2,6 +2,9 @@ var home = {
 
   headerHeight: 100,
 
+  mobile: window.innerWidth <= 800 ? true : false,
+  desktop: window.innerWidth > 800 ? true : false,
+
   createPattern: function(){
 
     // more options: http://bl.ocks.org/mbostock/5577023
@@ -18,8 +21,8 @@ var home = {
     var pattern = Trianglify({
       // api options
       // http://qrohlf.com/trianglify/
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: window.innerWidth + 100,
+      height: window.innerHeight + 100,
       cell_size: cellSize,
       x_colors: colors[xColor]
     });
@@ -76,7 +79,7 @@ var home = {
   },
 
 
-
+  // helper method for the section headers
   setSectionIndex: function(){
     var index = 0;
     $('.container section').each(function(i){
@@ -120,39 +123,13 @@ var home = {
       $('.contact textarea').text(newValue);
     });
   },
-  /*
-  expandPhoto: function(){
-    $(".photo").on('click', function(){
-      var $self = $(this);
-      if($self.hasClass("active")){
-        $self.css({
-          height: 102
-        });
-        $("html,body").animate({
-          scrollTop: $self.offset().top - 200
-        });
-      } else {
-        $self.css({
-          height: $self.find('img').innerHeight()
-        });
-      }
-      $self.toggleClass("active");
-      console.log();
-
-      //console.log();
-    });
-  },
-  flag: function(){
-    $('.credits .flag').on('click', function(){
-      $(this).toggleClass('active');
-      $(this).toggleClass('inactive');
-    });
-  }, */
 
   resizeListener: function(){
     var _this = this;
     $(window).resize(function(){
       _this.createPattern();
+      _this.mobile = window.innerWidth <= 800 ? true : false;
+      _this.desktop = window.innerWidth > 800 ? true : false;
     });
   },
 
@@ -171,9 +148,6 @@ var home = {
     // contact section
     this.convertTab();
     this.updateContactName();
-
-    //this.flag();
-    //this.expandPhoto();
   }
 }
 
@@ -181,3 +155,35 @@ var home = {
 $(document).ready(function(){
   home.init();
 });
+
+
+//this.flag();
+//this.expandPhoto();
+/*
+expandPhoto: function(){
+  $(".photo").on('click', function(){
+    var $self = $(this);
+    if($self.hasClass("active")){
+      $self.css({
+        height: 102
+      });
+      $("html,body").animate({
+        scrollTop: $self.offset().top - 200
+      });
+    } else {
+      $self.css({
+        height: $self.find('img').innerHeight()
+      });
+    }
+    $self.toggleClass("active");
+    console.log();
+
+    //console.log();
+  });
+},
+flag: function(){
+  $('.credits .flag').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).toggleClass('inactive');
+  });
+}, */

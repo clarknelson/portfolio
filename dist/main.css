@@ -67,6 +67,9 @@ body {
 
 * {
   line-height: 1.65em; }
+  @media screen and (max-width: 800px) {
+    * {
+      line-height: 1.4em; } }
 
 p {
   font-size: 16px; }
@@ -108,8 +111,9 @@ textarea {
 #mainHeader {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   z-index: 20;
   border-bottom: 4px solid white;
@@ -134,17 +138,20 @@ textarea {
     line-height: 1.2em;
     padding: 6px 1px 0; }
   #mainHeader .menu {
-    opacity: 0;
-    text-align: right; }
+    opacity: 0; }
     #mainHeader .menu span {
       color: #222426;
       display: block;
-      line-height: 125%;
+      line-height: 140%;
       font-weight: 500;
       opacity: 0.75;
       cursor: pointer; }
       #mainHeader .menu span:hover {
         opacity: 1; }
+    @media screen and (max-width: 800px) {
+      #mainHeader .menu {
+        position: absolute;
+        z-index: 1000; } }
   #mainHeader canvas {
     position: absolute;
     top: 50%;
@@ -154,11 +161,12 @@ textarea {
 .container {
   position: relative;
   color: white;
-  padding-top: 100vh;
+  padding-top: 120vh;
   opacity: 0;
   width: 90%;
   max-width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
   .container section {
     padding-bottom: 64px; }
     .container section header {
@@ -178,13 +186,13 @@ textarea {
     .grid {
       flex-direction: column; } }
   .grid .left {
-    flex: 0 0 61.5385%;
+    flex: 1 1 65%;
     margin-right: 25px; }
     @media screen and (max-width: 800px) {
       .grid .left {
         margin-right: 0; } }
   .grid .right {
-    flex: 0 0 38.4615%;
+    flex: 1 1 35%;
     margin-left: 25px; }
     @media screen and (max-width: 800px) {
       .grid .right {
@@ -200,14 +208,13 @@ textarea {
   .about .item {
     margin-top: 25px; }
     .about .item h3 {
-      font-size: 18px;
       font-weight: 400;
       letter-spacing: 1px; }
     .about .item ul {
       padding-left: 25px;
       margin-top: 15px; }
     .about .item li {
-      line-height: 1.4em;
+      line-height: 1.2em;
       padding: 3px; }
     .about .item .experience.list {
       list-style: upper-latin; }
@@ -325,6 +332,9 @@ textarea {
     margin-left: -3px; }
   .contact .right li {
     list-style: lower-latin; }
+    @media screen and (max-width: 800px) {
+      .contact .right li {
+        text-align: center; } }
   .contact .right .item {
     display: block; }
     .contact .right .item:hover {

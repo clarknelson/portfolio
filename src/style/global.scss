@@ -2,9 +2,13 @@ body{
   font-family: "Saturn", "Manifold", sans-serif;
   color: $dark-blue;
   background: $background;
+
 }
 *{
   line-height: 1.65em;
+  @media screen and (max-width: 800px){
+    line-height: 1.4em;
+  }
 }
 
 p{
