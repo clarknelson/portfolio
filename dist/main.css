@@ -82,6 +82,28 @@
   font-weight: 700;
   font-style: italic; }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/roboto/Roboto-Light.ttf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/roboto/Roboto-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/roboto/Roboto-Regular.ttf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/roboto/Roboto-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+
 body {
   font-family: "Roboto", "AnonymousPro", "Saturn", "Manifold", sans-serif;
   font-weight: 300;
@@ -92,7 +114,7 @@ body {
   line-height: 1.8em; }
   @media screen and (max-width: 800px) {
     * {
-      line-height: 1.4em; } }
+      line-height: 1.5em; } }
 
 p {
   font-size: 16px; }
@@ -131,50 +153,24 @@ input, textarea {
 textarea {
   padding: 0; }
 
-#mainHeader {
+#mainMenu {
+  opacity: 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 20;
-  border-bottom: 4px solid white;
-  box-shadow: 0px 4px 20px rgba(38, 38, 38, 0.8); }
-  #mainHeader .grid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    align-items: center;
-    width: 90%;
-    max-width: 980px;
-    padding: 0 50px;
-    transform: translate(-50%, -50%); }
-  #mainHeader .text h1 {
-    font-size: 28px;
-    letter-spacing: 1px;
-    margin-left: -1px; }
-  #mainHeader .menu {
-    opacity: 0;
-    text-align: right; }
-    #mainHeader .menu span {
-      font-family: "Saturn", "Manifold", sans-serif;
-      display: block;
-      line-height: 135%;
-      opacity: 0.6;
-      cursor: pointer; }
-      #mainHeader .menu span:hover {
-        opacity: 1; }
-    @media screen and (max-width: 800px) {
-      #mainHeader .menu {
-        position: absolute;
-        z-index: 1000; } }
-  #mainHeader canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  right: 20px;
+  z-index: 1000;
+  text-align: right; }
+  #mainMenu span {
+    font-family: "Saturn", "Manifold", sans-serif;
+    display: block;
+    line-height: 135%;
+    opacity: 0.6;
+    cursor: pointer;
+    color: white; }
+    #mainMenu span:hover {
+      opacity: 1; }
+  @media screen and (max-width: 800px) {
+    #mainMenu {
+      display: none; } }
 
 .container {
   position: relative;
@@ -219,6 +215,36 @@ textarea {
       width: 100%;
       box-shadow: 0 2px 8px rgba(26, 26, 26, 0.4);
       transition: all 0.2s; }
+
+#mainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 20;
+  border-bottom: 3px solid white;
+  box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.8); }
+  #mainHeader .grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    align-items: center;
+    width: 90%;
+    max-width: 980px;
+    padding: 0 50px;
+    transform: translate(-50%, -50%); }
+  #mainHeader .text h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-left: -1px; }
+  #mainHeader canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .about {
   padding-top: 25%; }
@@ -356,73 +382,112 @@ textarea {
     .contact .right .item:hover {
       color: #3B4B7F; }
 
-.credits .left h3 {
-  margin-bottom: 5px; }
+/* DEAD FOR NOW
+.credits{
 
-.credits .left strong {
-  font-weight: 300; }
+  .left{
+    h3{
+      margin-bottom: 5px;
+    }
+    strong{
+      font-weight: 300;
+    }
+  }
 
-.credits .active.flag .flag-background {
-  padding-bottom: 62%; }
+  .active.flag{
+    .flag-background{
+      padding-bottom: 62%;
+    }
+    .flag-line{
+      height: 15%;
 
-.credits .active.flag .flag-line {
-  height: 15%; }
-  .credits .active.flag .flag-line:nth-of-type(1) {
-    top: 25%; }
-  .credits .active.flag .flag-line:nth-of-type(2) {
-    top: 75%; }
+      &:nth-of-type(1){
+        top: 25%;
+      }
+      &:nth-of-type(2){
+        top: 75%;
+      }
+    }
+    .flag-stars{
+      padding: 0 15%;
+    }
+    footer{
+      opacity: 0.75;
+    }
+  }
+  .inactive.flag{
+    .flag-background{
+      padding-bottom: 25%;
+    }
+    .flag-line{
+      height: 14%;
 
-.credits .active.flag .flag-stars {
-  padding: 0 15%; }
+      &:nth-of-type(1){
+        top: 18%;
+      }
+      &:nth-of-type(2){
+        top: 82%;
+      }
+    }
 
-.credits .active.flag footer {
-  opacity: 0.75; }
+    .flag-stars{
+      padding: 0 28%;
+    }
 
-.credits .inactive.flag .flag-background {
-  padding-bottom: 25%; }
+    footer{
+      opacity: 0;
+    }
+  }
 
-.credits .inactive.flag .flag-line {
-  height: 14%; }
-  .credits .inactive.flag .flag-line:nth-of-type(1) {
-    top: 18%; }
-  .credits .inactive.flag .flag-line:nth-of-type(2) {
-    top: 82%; }
-
-.credits .inactive.flag .flag-stars {
-  padding: 0 28%; }
-
-.credits .inactive.flag footer {
-  opacity: 0; }
-
-.credits .flag footer {
-  text-align: center;
-  transition: all 0.2s; }
-
-.credits .flag-background {
-  position: relative;
-  background: white;
-  width: 100%;
-  transition: all 0.2s;
-  cursor: pointer; }
-  .credits .flag-background .flag-line {
-    position: absolute;
+  .flag footer{
+    text-align: center;
     transition: all 0.2s;
-    transform: translateY(-50%);
+  }
+  .flag-background{
+    position: relative;
+    background: white;
     width: 100%;
-    background: lightblue;
-    z-index: 100; }
-  .credits .flag-background .flag-stars {
-    display: flex;
-    justify-content: space-between;
-    z-index: 200;
-    padding: 0 10%;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
     transition: all 0.2s;
-    box-sizing: border-box; }
-    .credits .flag-background .flag-stars svg {
-      flex: 0 1 18%; }
-      .credits .flag-background .flag-stars svg path {
-        fill: red; }
+    cursor: pointer;
+
+    .flag-line{
+      position: absolute;
+      transition: all 0.2s;
+      transform: translateY(-50%);
+      width: 100%;
+      background: lightblue;
+      z-index: 100;
+    }
+
+    .flag-stars{
+      display: flex;
+      justify-content: space-between;
+      z-index: 200;
+      padding: 0 10%;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.2s;
+      box-sizing: border-box;
+
+      svg{
+        flex: 0 1 18%;
+
+        path{
+          fill: red;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+*/

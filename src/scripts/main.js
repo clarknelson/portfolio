@@ -1,6 +1,6 @@
 var home = {
 
-  headerHeight: 110,
+  headerHeight: 80,
 
   mobile: window.innerWidth <= 800 ? true : false,
   desktop: window.innerWidth > 800 ? true : false,
@@ -49,13 +49,15 @@ var home = {
   },
 
   createMenu: function(){
-    var mainHeaderMenu = $("#mainHeader .menu--root");
+    var _this = this;
+    var mainMenu = $("#mainMenu .menu--root");
+    $("#mainMenu").css({top: _this.headerHeight + 20});
     $(".container section").each(function(i){
       console.log(this.className, this);
       if(i == 0){
-        mainHeaderMenu.append("<span data-link='"+i+"'>home  0"+i+"</span>");
+        mainMenu.append("<span data-link='"+i+"'>home  0"+i+"</span>");
       } else {
-        mainHeaderMenu.append("<span data-link='"+i+"'>"+ this.className + "  0"+i+"</span>");
+        mainMenu.append("<span data-link='"+i+"'>"+ this.className + "  0"+i+"</span>");
       }
 
     });
@@ -79,10 +81,10 @@ var home = {
       var op = window.scrollY / window.innerHeight;
       if (op <= 1){
         $(".container").css("opacity", op);
-        $("#mainHeader .menu").css("opacity", op);
+        $("#mainMenu").css("opacity", op);
       } else {
         $(".container").css("opacity", 1);
-        $("#mainHeader .menu").css("opacity", 1);
+        $("#mainMenu").css("opacity", 1);
       }
     });
   },
