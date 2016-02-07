@@ -1,6 +1,6 @@
 var home = {
 
-  headerHeight: 100,
+  headerHeight: 110,
 
   mobile: window.innerWidth <= 800 ? true : false,
   desktop: window.innerWidth > 800 ? true : false,
