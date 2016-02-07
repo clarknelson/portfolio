@@ -60,13 +60,36 @@
   src: url("../src/fonts/saturn/OTF/ATCSaturn-6.otf");
   font-weight: 600; }
 
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("../src/fonts/manifoldDisplay/AnonymousPro.ttf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("../src/fonts/manifoldDisplay/AnonymousProItalic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("../src/fonts/manifoldDisplay/AnonymousProBold.ttf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "AnonymousPro";
+  src: url("../src/fonts/manifoldDisplay/AnonymousProBoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic; }
+
 body {
-  font-family: "Saturn", "Manifold", sans-serif;
+  font-family: "Roboto", "AnonymousPro", "Saturn", "Manifold", sans-serif;
+  font-weight: 300;
   color: #222426;
   background: #222426; }
 
 * {
-  line-height: 1.65em; }
+  line-height: 1.8em; }
   @media screen and (max-width: 800px) {
     * {
       line-height: 1.4em; } }
@@ -76,8 +99,8 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Manifold Display", sans-serif;
-  font-weight: 500;
-  line-height: 1.1em; }
+  font-weight: 300;
+  line-height: 1.25em; }
 
 body, h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
@@ -129,22 +152,17 @@ textarea {
     padding: 0 50px;
     transform: translate(-50%, -50%); }
   #mainHeader .text h1 {
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 1px; }
-  #mainHeader .text p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2em;
-    padding: 6px 1px 0; }
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-left: -1px; }
   #mainHeader .menu {
-    opacity: 0; }
+    opacity: 0;
+    text-align: right; }
     #mainHeader .menu span {
-      color: #222426;
+      font-family: "Saturn", "Manifold", sans-serif;
       display: block;
-      line-height: 140%;
-      font-weight: 500;
-      opacity: 0.75;
+      line-height: 135%;
+      opacity: 0.6;
       cursor: pointer; }
       #mainHeader .menu span:hover {
         opacity: 1; }
@@ -174,10 +192,9 @@ textarea {
       margin-bottom: 40px;
       border-bottom: 1px solid white; }
       .container section header h4 {
-        font-family: "Saturn", "Manifold", sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 6px; }
+        font-weight: 400;
+        margin-bottom: 6px;
+        font-family: "Saturn", "Manifold", sans-serif; }
 
 .grid {
   display: flex;
@@ -246,8 +263,7 @@ textarea {
       display: block;
       margin-top: 6px; }
     .work .grid.item .left .website-description {
-      margin: 10px 0;
-      line-height: 1.4em; }
+      margin: 10px 0; }
     .work .grid.item .left .website-details {
       padding: 5px 10px; }
       .work .grid.item .left .website-details li {

@@ -52,15 +52,24 @@ var home = {
     var mainHeaderMenu = $("#mainHeader .menu--root");
     $(".container section").each(function(i){
       console.log(this.className, this);
-      mainHeaderMenu.append("<span data-link='"+i+"'>0"+i+": "+ this.className + "</span>");
+      if(i == 0){
+        mainHeaderMenu.append("<span data-link='"+i+"'>home  0"+i+"</span>");
+      } else {
+        mainHeaderMenu.append("<span data-link='"+i+"'>"+ this.className + "  0"+i+"</span>");
+      }
+
     });
 
     $("#mainHeader .menu span").on('click', function(e){
-      var targetSection = $('.container').find("section[data-index=\""+ $(this).data("link") +"\"]");
-      $("html,body").animate({scrollTop: targetSection.offset().top - 150});
-      console.log(targetSection.offset().top);
-      $('.container section').find("[data-index="+ $(this).data("link") +"]")
 
+      var targetSection = $('.container').find("section[data-index=\""+ $(this).data("link") +"\"]");
+      var offset;
+      if($(this).data("link") == 0){
+        $("html,body").animate({scrollTop: 0});
+      } else {
+        offset = targetSection.offset().top;
+        $("html,body").animate({scrollTop: offset - 150});
+      }
     });
 
   },

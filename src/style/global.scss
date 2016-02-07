@@ -1,11 +1,11 @@
 body{
-  font-family: "Saturn", "Manifold", sans-serif;
+  font-family: "Roboto", "AnonymousPro", "Saturn", "Manifold", sans-serif;
+  font-weight: 300;
   color: $dark-blue;
   background: $background;
-
 }
 *{
-  line-height: 1.65em;
+  line-height: 1.8em;
   @media screen and (max-width: 800px){
     line-height: 1.4em;
   }
@@ -18,8 +18,8 @@ p{
 
 h1,h2,h3,h4,h5,h6{
   font-family: "Manifold Display", sans-serif;
-  font-weight: 500;
-  line-height: 1.1em;
+  font-weight: 300;
+  line-height: 1.25em;
 }
 body,h1,h2,h3,h4,h5,h6,p{
   margin: 0;
