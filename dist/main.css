@@ -244,6 +244,30 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  #mainHeader .jumpDown {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: all 0.2s; }
+    #mainHeader .jumpDown:hover {
+      opacity: 1; }
+    #mainHeader .jumpDown .jumpDown--message {
+      margin-bottom: -5px; }
+    #mainHeader .jumpDown .jumpDown--arrow {
+      position: relative;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translateX(-50%) rotate(45deg);
+      border-right: 2px solid #222426;
+      border-bottom: 2px solid #222426;
+      border-radius: 2px; }
 
 .about {
   padding-top: 5%; }

@@ -89,6 +89,13 @@ var home = {
     });
   },
 
+  jumpDownListener: function(){
+    $("#mainHeader .jumpDown").on('click', function(){
+      var offset = $(".container section:first-of-type").offset().top;
+      $("html,body").animate({scrollTop: offset});
+    });
+  },
+
 
   // helper method for the section headers
   setSectionIndex: function(){
@@ -128,12 +135,6 @@ var home = {
     });
   },
 
-  updateContactName: function(){
-    $('.contact .name').on('change', function(){
-      var newValue = $('.contact textarea').text().replace("John Doe", this.value);
-      $('.contact textarea').text(newValue);
-    });
-  },
 
   resizeListener: function(){
     var _this = this;
@@ -155,10 +156,10 @@ var home = {
     this.headerScrollListener();
     this.createMenu();
     this.contentOpacityScroll();
+    this.jumpDownListener();
 
     // contact section
     this.convertTab();
-    this.updateContactName();
   }
 }
 

@@ -121,6 +121,38 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .jumpDown{
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover{
+      opacity: 1;
+    }
+
+    .jumpDown--message{
+      margin-bottom: -5px;
+    }
+    .jumpDown--arrow{
+      $size: 30px;
+      position: relative;
+      left: 50%;
+      width: $size;
+      height: $size;
+      transform: translateX(-50%) rotate(45deg);
+      border-right: 2px solid $dark-blue;
+      border-bottom: 2px solid $dark-blue;
+      border-radius: 2px;
+    }
+  }
 }
 
 .about{
