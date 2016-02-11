@@ -145,10 +145,9 @@ a {
 input, textarea {
   background: transparent;
   border: none;
-  font-family: "Saturn", "Manifold", sans-serif;
+  outline: none;
   font-size: 16px;
-  color: white;
-  outline: none; }
+  color: white; }
 
 textarea {
   padding: 0; }
@@ -303,27 +302,44 @@ textarea {
 
 .contact .left label {
   display: flex;
-  padding: 2px; }
+  align-items: baseline;
+  margin-bottom: 10px; }
   .contact .left label span {
     flex: 0 0 20%; }
   .contact .left label input {
-    flex: 0 0 80%; }
+    flex: 1 0 80%;
+    background: #262a2b;
+    border: 1px solid #3a3e41;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    font-weight: 300; }
 
 .contact .left textarea {
   width: 100%;
   height: auto;
   font-size: 16px;
   line-height: 1.3em;
-  cursor: pointer;
-  margin-top: 10px;
   box-sizing: border-box;
-  background: #262a2b;
   padding: 6px 10px;
+  background: #262a2b;
   border: 1px solid #3a3e41; }
   .contact .left textarea:focus {
     cursor: inherit; }
   .contact .left textarea::-webkit-scrollbar {
     display: none; }
+
+.contact .left button {
+  background: #262a2b;
+  border: 1px solid #3a3e41;
+  border-radius: 2px;
+  padding: 6px 10px;
+  color: white;
+  font-size: 16px;
+  font-family: "Saturn", "Anonymous", sans-serif;
+  cursor: pointer;
+  outline: none; }
+  .contact .left button:hover {
+    opacity: 0.75; }
 
 .contact .right {
   display: block; }

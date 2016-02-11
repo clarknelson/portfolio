@@ -210,12 +210,18 @@
 
     label{
       display: flex;
-      padding: 2px;
+      align-items: baseline;;
+      margin-bottom: 10px;
       span{
         flex: 0 0 20%;
       }
       input{
-        flex: 0 0 80%;
+        flex: 1 0 80%;
+        background: lighten($dark-blue, 2%);
+        border: 1px solid lighten($dark-blue, 10%);
+        padding: 4px 12px;
+        box-sizing: border-box;
+        font-weight: 300;
       }
     }
 
@@ -224,11 +230,10 @@
       height: auto;
       font-size: 16px;
       line-height: 1.3em;
-      cursor: pointer;
-      margin-top: 10px;
       box-sizing: border-box;
-      background: lighten($dark-blue, 2%);
+
       padding: 6px 10px;
+      background: lighten($dark-blue, 2%);
       border: 1px solid lighten($dark-blue, 10%);
 
       &:focus{
@@ -236,6 +241,22 @@
       }
       &::-webkit-scrollbar{
         display: none;
+      }
+    }
+
+    button{
+      background: lighten($dark-blue, 2%);
+      border: 1px solid lighten($dark-blue, 10%);
+      border-radius: 2px;
+      padding: 6px 10px;
+      color: white;
+      font-size: 16px;
+      font-family: "Saturn", "Anonymous", sans-serif;
+      cursor: pointer;
+      outline: none;
+
+      &:hover{
+        opacity: 0.75;
       }
     }
 
