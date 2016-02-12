@@ -53,16 +53,14 @@ var home = {
     var mainMenu = $("#mainMenu .menu--root");
     $("#mainMenu").css({top: _this.headerHeight + 20});
     $(".container section").each(function(i){
-      console.log(this.className, this);
       if(i == 0){
         mainMenu.append("<span data-link='"+i+"'>home  0"+i+"</span>");
       } else {
         mainMenu.append("<span data-link='"+i+"'>"+ this.className + "  0"+i+"</span>");
       }
-
     });
 
-    $("#mainHeader .menu span").on('click', function(e){
+    $("#mainMenu span").on('click', function(e){
 
       var targetSection = $('.container').find("section[data-index=\""+ $(this).data("link") +"\"]");
       var offset;
@@ -92,7 +90,7 @@ var home = {
   jumpDownListener: function(){
     $("#mainHeader .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
-      $("html,body").animate({scrollTop: offset});
+      $("html,body").animate({scrollTop: offset - 50});
     });
   },
 
