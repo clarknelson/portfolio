@@ -90,7 +90,7 @@ var home = {
   jumpDownListener: function(){
     $("#mainHeader .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
-      $("html,body").animate({scrollTop: offset - 50});
+      $("html,body").animate({scrollTop: offset});
     });
   },
 
