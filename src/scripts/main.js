@@ -1,6 +1,6 @@
 var home = {
 
-  headerHeight: 80,
+  preferedHeaderSize: 80,
 
   mobile: window.innerWidth <= 800 ? true : false,
   desktop: window.innerWidth > 800 ? true : false,
@@ -29,34 +29,34 @@ var home = {
 
     // take out the old canvas
     $("#mainHeader canvas").remove()
-    $("#mainHeader").append(pattern.canvas());
+    //$("#mainHeader").append(pattern.canvas());
   },
 
   headerScrollListener: function(){
     var _this = this;
+    var $header = $('#mainHeader');
     $(window).on('scroll', function(e){
-      var vh = Math.floor(window.innerHeight - window.scrollY);
-      if (vh > _this.headerHeight){
-        $("#mainHeader").css({
-          height: vh
-        });
-      } else {
-        $("#mainHeader").css({
-          height: _this.headerHeight
-        });
-      }
+      var headerHeight = Math.floor(window.innerHeight - window.scrollY);
+      requestAnimationFrame(function(){
+        if (headerHeight < _this.preferedHeaderSize){
+          $header.css("height", _this.preferedHeaderSize);
+        } else {
+          $header.css("height", headerHeight);
+        }
+      });
+
     });
   },
 
   createMenu: function(){
     var _this = this;
     var mainMenu = $("#mainMenu .menu--root");
-    $("#mainMenu").css({top: _this.headerHeight + 20});
+    $("#mainMenu").css({top: _this.preferedHeaderSize + 20});
     $(".container section").each(function(i){
       if(i == 0){
-        mainMenu.append("<span data-link='"+i+"'>home  0"+i+"</span>");
+        mainMenu.append("<span data-link='"+i+"'>home</span>");
       } else {
-        mainMenu.append("<span data-link='"+i+"'>"+ this.className + "  0"+i+"</span>");
+        mainMenu.append("<span data-link='"+i+"'>"+ this.className +"</span>");
       }
     });
 

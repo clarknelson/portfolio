@@ -1,0 +1,25 @@
+#mainMenu{
+  position: fixed;
+  opacity: 0;
+
+  right: 1rem;
+  z-index: 1000;
+  text-align: right;
+
+  span{
+    display: block;
+    font-family: $monoFont;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    opacity: 0.75;
+    cursor: context-menu;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    display: none;
+  }
+}

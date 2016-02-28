@@ -1,36 +1,33 @@
-body{
-  font-family: "Roboto", "AnonymousPro", "Saturn", "Manifold", sans-serif;
-  font-weight: 300;
-  color: $dark-blue;
-  background: $background;
-}
 *{
-  line-height: 1.8em;
+  line-height: 1.8rem;
   @media screen and (max-width: 800px){
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
 }
 
-p{
-  //font-family: "Manifold", sans-serif;
-  font-size: 16px;
+html{
+  font-size: 15px;
+}
+body{
+  font-family: $bodyFont;
+  font-weight: 300;
+  color: white;
+  background: $background;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: "Manifold Display", sans-serif;
-  font-weight: 300;
-  line-height: 1.25em;
-}
 body,h1,h2,h3,h4,h5,h6,p{
   margin: 0;
 }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $displayFont;
+  font-weight: 300;
+}
+
 ul{
   padding: 0;
   margin: 0;
   list-style: none;
-}
-li{
-  line-height: 1.75em;
 }
 
 a{
@@ -39,7 +36,7 @@ a{
   transition: all 0.1s ease-in;
 
   &:hover{
-    color: lighten($blue, 20%);
+    color: lighten($blue, 40%);
   }
 }
 
@@ -50,6 +47,7 @@ input, textarea{
   font-size: 16px;
   color: white;
 }
+
 textarea{
   padding: 0;
 }
