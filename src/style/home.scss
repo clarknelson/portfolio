@@ -73,7 +73,7 @@ $siteWidth: 980px;
 
   // background: linear-gradient(to bottom, #000, #fff);
   // background: radial-gradient(circle at bottom left, #000, #fff);
-  background: url('../src/imgs/background.jpeg');
+  background: url('../src/imgs/background5.jpeg');
   background-position: center;
   background-size: cover;
 
@@ -92,6 +92,9 @@ $siteWidth: 980px;
     color: white;
     h1{
       margin-left: -1px;
+    }
+    p{
+      line-height: 1em;
     }
   }
 

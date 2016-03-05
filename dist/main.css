@@ -129,18 +129,95 @@
   src: url("../src/fonts/venera/Venera-900.otf");
   font-weight: 900; }
 
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Thin.otf");
+  font-weight: 100; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-ThinItalic.otf");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-ExtraLight.otf");
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-ExtraLightItalic.otf");
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Light.otf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-LightItalic.otf");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Regular.otf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-RegularItalic.otf");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Medium.otf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-MediumItalic.otf");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Bold.otf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-BoldItalic.otf");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-Heavy.otf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Overlook";
+  src: url("../src/fonts/overlook/ATCOverlook-HeavyItalic.otf");
+  font-weight: 700;
+  font-style: italic; }
+
 * {
-  line-height: 1.8rem; }
+  line-height: 2rem; }
   @media screen and (max-width: 800px) {
     * {
       line-height: 1.5rem; } }
 
 html {
-  font-size: 15px; }
+  font-size: 16px; }
 
 body {
-  font-family: "Roboto", "AnonymousPro", "Saturn", "Manifold", sans-serif;
-  font-weight: 300;
+  font-family: "Overlook", "Roboto", "Saturn", "Manifold", sans-serif;
+  font-weight: 200;
   color: white;
   background: #222426; }
 
@@ -151,17 +228,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Venera", "Manifold Display", sans-serif;
   font-weight: 300; }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
 a {
+  font-weight: 400;
   text-decoration: none;
   color: #7089c2;
   transition: all 0.1s ease-in; }
   a:hover {
     color: #adb7d9; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
 
 input, textarea {
   background: transparent;
@@ -187,7 +265,7 @@ textarea {
     margin-bottom: 2rem;
     border-bottom: 1px solid white; }
     .container section header h4 {
-      font-family: "Saturn", "Manifold", sans-serif;
+      font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
       line-height: 2em;
       font-weight: 500;
       opacity: 0.75; }
@@ -226,7 +304,7 @@ textarea {
   z-index: 20;
   border-bottom: 3px solid white;
   box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.8);
-  background: url("../src/imgs/background.jpeg");
+  background: url("../src/imgs/background5.jpeg");
   background-position: center;
   background-size: cover; }
   #mainHeader .grid {
@@ -241,6 +319,8 @@ textarea {
     color: white; }
     #mainHeader .text h1 {
       margin-left: -1px; }
+    #mainHeader .text p {
+      line-height: 1em; }
   #mainHeader .jumpDown {
     position: fixed;
     bottom: 3rem;
@@ -516,7 +596,7 @@ textarea {
   text-align: right; }
   #mainMenu span {
     display: block;
-    font-family: "Saturn", "Manifold", sans-serif;
+    font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
     font-size: 1.2rem;
     line-height: 1.2em;
     opacity: 0.75;

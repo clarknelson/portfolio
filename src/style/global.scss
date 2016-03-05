@@ -1,16 +1,17 @@
 *{
-  line-height: 1.8rem;
+  line-height: 2rem;
   @media screen and (max-width: 800px){
     line-height: 1.5rem;
   }
 }
 
 html{
-  font-size: 15px;
+  font-size: 16px;
 }
+
 body{
   font-family: $bodyFont;
-  font-weight: 300;
+  font-weight: 200;
   color: white;
   background: $background;
 }
@@ -24,13 +25,12 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 300;
 }
 
-ul{
-  padding: 0;
-  margin: 0;
-  list-style: none;
+p{
+
 }
 
 a{
+  font-weight: 400;
   text-decoration: none;
   color: $light-blue;
   transition: all 0.1s ease-in;
@@ -38,6 +38,12 @@ a{
   &:hover{
     color: lighten($blue, 40%);
   }
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 input, textarea{
