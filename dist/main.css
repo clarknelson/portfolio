@@ -207,13 +207,13 @@
   font-style: italic; }
 
 * {
-  line-height: 1.75rem; }
-  @media screen and (max-width: 800px) {
-    * {
-      line-height: 1.5rem; } }
+  line-height: 1.563rem; }
 
 html {
   font-size: 18px; }
+  @media screen and (max-width: 800px) {
+    html {
+      font-size: 16px; } }
 
 body {
   font-family: "Overlook", "Roboto", "Saturn", "Manifold", sans-serif;
@@ -226,7 +226,16 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Venera", "Manifold Display", sans-serif;
-  font-weight: 300; }
+  font-weight: 700; }
+
+h1 {
+  font-size: 1.953em; }
+
+h2 {
+  font-size: 1.563em; }
+
+h3 {
+  font-size: 1.25em; }
 
 a {
   font-weight: 400;
@@ -250,30 +259,6 @@ input, textarea {
 
 textarea {
   padding: 0; }
-
-.grid {
-  display: flex;
-  margin-bottom: 40px; }
-  @media screen and (max-width: 800px) {
-    .grid {
-      flex-direction: column; } }
-  .grid .left {
-    flex: 1 1 65%;
-    margin-right: 25px; }
-    @media screen and (max-width: 800px) {
-      .grid .left {
-        margin-right: 0; } }
-  .grid .right {
-    flex: 1 1 35%;
-    margin-left: 25px; }
-    @media screen and (max-width: 800px) {
-      .grid .right {
-        margin-left: 0;
-        margin-top: 25px; } }
-    .grid .right img {
-      width: 100%;
-      box-shadow: 0 2px 8px rgba(26, 26, 26, 0.4);
-      transition: all 0.2s; }
 
 #mainHeader {
   position: relative;
@@ -300,7 +285,8 @@ textarea {
   #mainHeader .text {
     color: white; }
     #mainHeader .text h1 {
-      margin-left: -1px; }
+      margin-left: -1px;
+      line-height: 1em; }
     #mainHeader .text p {
       line-height: 1em; }
   #mainHeader .jumpDown {
@@ -330,21 +316,25 @@ textarea {
 .about {
   padding-top: 5%; }
   .about .left {
-    padding-left: 2rem; }
+    padding-left: 1.25rem; }
+    @media screen and (max-width: 800px) {
+      .about .left {
+        padding-left: 0; } }
   @media screen and (max-width: 800px) {
     .about .right {
       display: none; } }
 
 .work .grid.item {
-  border-left: 1px solid rgba(238, 241, 246, 0.5); }
+  border-left: 1px solid #f8f8f8; }
   .work .grid.item .left {
-    padding-left: 2rem; }
-    .work .grid.item .left .website-name {
-      font-weight: 300; }
+    padding-left: 1.25rem; }
     .work .grid.item .left .website-link {
-      display: block; }
+      display: block;
+      margin-bottom: 0.8em; }
     .work .grid.item .left .website-description {
-      margin-bottom: 1rem; }
+      margin-bottom: 1.25em; }
+    .work .grid.item .left .website-details strong {
+      font-weight: 500; }
   @media screen and (max-width: 800px) {
     .work .grid.item .right img {
       height: 250px;
@@ -578,10 +568,9 @@ textarea {
   text-align: right; }
   #mainMenu span {
     display: block;
-    font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.2em;
+    font-family: "Saturn", "Anonymous", "Manifold", sans-serif;
     opacity: 0.75;
+    line-height: 1.5em;
     cursor: context-menu; }
     #mainMenu span:hover {
       opacity: 1; }
@@ -598,14 +587,15 @@ textarea {
   overflow: hidden; }
   .container section header {
     opacity: 0.75;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid white; }
+    padding-top: 1.563em;
+    margin-bottom: 1.563em;
+    border-bottom: 1px solid #f8f8f8; }
     .container section header h4 {
-      font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
-      line-height: 2em;
-      font-weight: 500;
-      opacity: 0.75; }
+      font-family: "Saturn", "Anonymous", "Manifold", sans-serif;
+      font-size: 0.8em;
+      line-height: 1.25em;
+      font-weight: 600;
+      color: #f8f8f8; }
 
 .grid {
   display: flex;
@@ -614,13 +604,13 @@ textarea {
     .grid {
       flex-direction: column; } }
   .grid .left {
-    flex: 1 1 65%;
+    flex: 1 1 62%;
     margin-right: 25px; }
     @media screen and (max-width: 800px) {
       .grid .left {
         margin-right: 0; } }
   .grid .right {
-    flex: 1 1 35%;
+    flex: 1 1 38%;
     margin-left: 25px; }
     @media screen and (max-width: 800px) {
       .grid .right {

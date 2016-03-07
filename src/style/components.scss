@@ -1,7 +1,6 @@
 #mainMenu{
   position: fixed;
   opacity: 0;
-
   right: 1rem;
   z-index: 1000;
   text-align: right;
@@ -9,9 +8,8 @@
   span{
     display: block;
     font-family: $monoFont;
-    font-size: 1.2rem;
-    line-height: 1.2em;
     opacity: 0.75;
+    line-height: 1.5em;
     cursor: context-menu;
 
     &:hover{
@@ -37,15 +35,16 @@
   section{
     header{
       opacity: 0.75;
-      padding-top: 2rem;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid white;
+      padding-top: 1.563em;
+      margin-bottom: 1.563em;
+      border-bottom: 1px solid $off-white;
 
       h4{
         font-family: $monoFont;
-        line-height: 2em;
-        font-weight: 500;
-        opacity: 0.75;
+        font-size: 0.8em;
+        line-height: 1.25em;
+        font-weight: 600;
+        color: $off-white;
       }
     }
   }
@@ -59,7 +58,7 @@
     flex-direction: column;
   }
   .left{
-    flex: 1 1 65%;
+    flex: 1 1 62%;
     margin-right: 25px;
 
     @media screen and (max-width: 800px){
@@ -67,7 +66,7 @@
     }
   }
   .right{
-    flex: 1 1 35%;
+    flex: 1 1 38%;
     margin-left: 25px;
 
     @media screen and (max-width: 800px){

@@ -93,10 +93,9 @@ var home = {
     $("#mainHeader .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
       $("html,body").animate({scrollTop: offset});
-      $('#mainHeader').css("height", _this.preferedHeaderSize);
+      //$('#mainHeader').css("height", _this.preferedHeaderSize);
     });
   },
-
 
   // helper method for the section headers
   setSectionIndex: function(){
