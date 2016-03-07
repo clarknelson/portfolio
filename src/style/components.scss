@@ -23,3 +23,62 @@
     display: none;
   }
 }
+
+.container{
+  position: relative;
+  max-width: $siteWidth;
+
+  opacity: 0;
+  width: 90%;
+
+  margin: 0 auto;
+  overflow: hidden;
+
+  section{
+    header{
+      opacity: 0.75;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid white;
+
+      h4{
+        font-family: $monoFont;
+        line-height: 2em;
+        font-weight: 500;
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+.grid{
+  display: flex;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+  }
+  .left{
+    flex: 1 1 65%;
+    margin-right: 25px;
+
+    @media screen and (max-width: 800px){
+      margin-right: 0;
+    }
+  }
+  .right{
+    flex: 1 1 35%;
+    margin-left: 25px;
+
+    @media screen and (max-width: 800px){
+      margin-left: 0;
+      margin-top: 25px;
+    }
+    img{
+      width: 100%;
+      box-shadow: 0 2px 8px hsla(0,0%,10%,0.4);
+      transition: all 0.2s;
+
+    }
+  }
+}

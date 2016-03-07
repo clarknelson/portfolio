@@ -34,16 +34,17 @@ var home = {
 
   headerScrollListener: function(){
     var _this = this;
-    var $header = $('#mainHeader');
     $(window).on('scroll', function(e){
+      console.log()
       var headerHeight = Math.floor(window.innerHeight - window.scrollY);
-      requestAnimationFrame(function(){
-        if (headerHeight < _this.preferedHeaderSize){
-          $header.css("height", _this.preferedHeaderSize);
-        } else {
-          $header.css("height", headerHeight);
-        }
-      });
+      if (window.scrollY < _this.preferedHeaderSize){
+        //$header.css("height", headerHeight);
+        $header.css("height", _this.preferedHeaderSize);
+        //
+      } else {
+        //$("html,body").animate({scrollTop: 1000);
+
+      }
 
     });
   },
@@ -88,9 +89,11 @@ var home = {
   },
 
   jumpDownListener: function(){
+    var _this = this;
     $("#mainHeader .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
       $("html,body").animate({scrollTop: offset});
+      $('#mainHeader').css("height", _this.preferedHeaderSize);
     });
   },
 
@@ -151,7 +154,8 @@ var home = {
 
     //header
     this.createPattern();
-    this.headerScrollListener();
+    //this.headerScrollListener();
+    //this.headerClickListener();
     this.createMenu();
     this.contentOpacityScroll();
     this.jumpDownListener();

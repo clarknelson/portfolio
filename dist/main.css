@@ -207,17 +207,17 @@
   font-style: italic; }
 
 * {
-  line-height: 2rem; }
+  line-height: 1.75rem; }
   @media screen and (max-width: 800px) {
     * {
       line-height: 1.5rem; } }
 
 html {
-  font-size: 16px; }
+  font-size: 18px; }
 
 body {
   font-family: "Overlook", "Roboto", "Saturn", "Manifold", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
   background: #222426; }
 
@@ -251,25 +251,6 @@ input, textarea {
 textarea {
   padding: 0; }
 
-.container {
-  position: relative;
-  max-width: 980px;
-  opacity: 0;
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-top: 120vh; }
-  .container section header {
-    opacity: 0.75;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid white; }
-    .container section header h4 {
-      font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
-      line-height: 2em;
-      font-weight: 500;
-      opacity: 0.75; }
-
 .grid {
   display: flex;
   margin-bottom: 40px; }
@@ -295,18 +276,19 @@ textarea {
       transition: all 0.2s; }
 
 #mainHeader {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
-  z-index: 20;
+  z-index: 100;
   border-bottom: 3px solid white;
   box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.8);
   background: url("../src/imgs/background5.jpeg");
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  transition: height 0.4s; }
   #mainHeader .grid {
     position: absolute;
     top: 50%;
@@ -606,3 +588,45 @@ textarea {
   @media screen and (max-width: 800px) {
     #mainMenu {
       display: none; } }
+
+.container {
+  position: relative;
+  max-width: 980px;
+  opacity: 0;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .container section header {
+    opacity: 0.75;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white; }
+    .container section header h4 {
+      font-family: "AnonymousPro", "Manifold", "Saturn", sans-serif;
+      line-height: 2em;
+      font-weight: 500;
+      opacity: 0.75; }
+
+.grid {
+  display: flex;
+  margin-bottom: 40px; }
+  @media screen and (max-width: 800px) {
+    .grid {
+      flex-direction: column; } }
+  .grid .left {
+    flex: 1 1 65%;
+    margin-right: 25px; }
+    @media screen and (max-width: 800px) {
+      .grid .left {
+        margin-right: 0; } }
+  .grid .right {
+    flex: 1 1 35%;
+    margin-left: 25px; }
+    @media screen and (max-width: 800px) {
+      .grid .right {
+        margin-left: 0;
+        margin-top: 25px; } }
+    .grid .right img {
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(26, 26, 26, 0.4);
+      transition: all 0.2s; }
