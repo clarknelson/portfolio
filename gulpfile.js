@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
 
+var autoprefixer = require("gulp-autoprefixer");
 var sass = require("gulp-sass");
 
 var imagemin = require('gulp-imagemin');
@@ -11,6 +12,10 @@ var imageminJpegtran = require('imagemin-jpegtran');
 gulp.task('scss', function() {
   gulp.src('src/style/main.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+  			browsers: ['last 2 versions'],
+  			cascade: false
+  		}))
     .pipe(gulp.dest('./dist'));
   browserSync.reload();
 });

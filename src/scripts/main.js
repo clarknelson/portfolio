@@ -9,13 +9,12 @@ var home = {
 
     // more options: http://bl.ocks.org/mbostock/5577023
     var colors = [
-      'YlOrRd',
+      //'YlOrRd',
       //'YlOrBr',
-      //'Greys',
+      'Greys',
       //'Spectral'
     ];
     var xColor = Math.floor(Math.random() * colors.length);
-    console.log();
 
     var cellSize = 102;
     var pattern = Trianglify({
@@ -29,50 +28,41 @@ var home = {
 
     // take out the old canvas
     $("#mainHeader canvas").remove()
-    //$("#mainHeader").append(pattern.canvas());
+    $("#mainHeader").append(pattern.canvas());
   },
 
-  headerScrollListener: function(){
-    var _this = this;
-    $(window).on('scroll', function(e){
-      console.log()
-      var headerHeight = Math.floor(window.innerHeight - window.scrollY);
-      if (window.scrollY < _this.preferedHeaderSize){
-        //$header.css("height", headerHeight);
-        $header.css("height", _this.preferedHeaderSize);
-        //
-      } else {
-        //$("html,body").animate({scrollTop: 1000);
 
-      }
-
-    });
-  },
 
   createMenu: function(){
     var _this = this;
-    var mainMenu = $("#mainMenu .menu--root");
-    $("#mainMenu").css({top: _this.preferedHeaderSize + 20});
+    var mainMenu = $("#mainMenu .menu__root");
+    //mainMenu.append("<span data-link='"+420+"'>Home</span>");
+
     $(".container section").each(function(i){
-      if(i == 0){
-        mainMenu.append("<span data-link='"+i+"'>home</span>");
-      } else {
-        mainMenu.append("<span data-link='"+i+"'>"+ this.className +"</span>");
-      }
+      var title = $(this).find("header").html();
+      mainMenu.append("<span data-link='"+i+"'>"+ title +"</span>");
     });
 
     $("#mainMenu span").on('click', function(e){
-
       var targetSection = $('.container').find("section[data-index=\""+ $(this).data("link") +"\"]");
-      var offset;
-      if($(this).data("link") == 0){
-        $("html,body").animate({scrollTop: 0});
-      } else {
-        offset = targetSection.offset().top;
-        $("html,body").animate({scrollTop: offset - 150});
-      }
+      var offset = targetSection.offset().top;
+      $("html,body").animate({scrollTop: offset});
+      //_this.toggleMenu($("#mainMenu .hamburger"));
     });
 
+  },
+
+  addToggleMenuListener: function(){
+    var _this = this;
+    $("#mainMenu").on('click', function(){
+      _this.toggleMenu(this);
+    });
+  },
+
+  toggleMenu: function(element){
+    $(element).toggleClass("is-active");
+    $(element).find(".hamburger").toggleClass("is-active");
+    $(element).find(".menu__root").toggleClass("closed");
   },
 
   contentOpacityScroll: function(){
@@ -88,52 +78,27 @@ var home = {
     });
   },
 
-  jumpDownListener: function(){
-    var _this = this;
-    $("#mainHeader .jumpDown").on('click', function(){
-      var offset = $(".container section:first-of-type").offset().top;
-      $("html,body").animate({scrollTop: offset});
-      //$('#mainHeader').css("height", _this.preferedHeaderSize);
+  hideBlogPosts: function(){
+    $(".blog .post").each(function(){
+      var $postContent = $(this).find(".post__content");
+      var height = $postContent.innerHeight() + 100; // safe buffer
+
+      $postContent.data("contentHeight", height);
+      $postContent.toggleClass("hidden");
+      $postContent.css("max-height", 0);
     });
-  },
 
-  // helper method for the section headers
-  setSectionIndex: function(){
-    var index = 0;
-    $('.container section').each(function(i){
-      if($(this).css('display') === "none"){
-        return;
-      }
-      $(this).find("header h4 span").text("0" + index);
-      index++;
-    });
-  },
-
-  // more user friendly <textarea></textarea>
-  // http://stackoverflow.com/questions/6140632/how-to-handle-tab-in-textarea
-  convertTab: function(){
-    $(".contact textarea").keydown(function(e) {
-      if(e.keyCode === 9) { // tab was pressed
-        // get caret position/selection
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
-
-        var $this = $(this);
-        var value = $this.val();
-
-        // set textarea value to: text before caret + tab + text after caret
-        $this.val(value.substring(0, start)
-                    + "\t"
-                    + value.substring(end));
-
-        // put caret at right position again (add one for the tab)
-        this.selectionStart = this.selectionEnd = start + 1;
-
-        // prevent the focus lose
-        e.preventDefault();
+    $(".blog .post .post__header").on("click", function(){
+      var $postContent = $(this).parent().find(".post__content");
+      $postContent.toggleClass("hidden");
+      if($postContent.hasClass("hidden")){
+        $postContent.css("max-height", 0);
+      } else {
+        $postContent.css("max-height", $postContent.data("contentHeight"));
       }
     });
   },
+
 
 
   resizeListener: function(){
@@ -145,23 +110,91 @@ var home = {
     });
   },
 
+  scrollListener: function(){
+    var _this = this;
+    $(window).on('scroll', function(e){
+      _this.showHideJumpDown(window.scrollY);
+    });
+  },
+
+  showHideJumpDown: function(offset){
+    var $jumpDown = $('#mainHeader .jumpDown');
+    if(offset > window.innerHeight){
+      $jumpDown.hide();
+    } else {
+      $jumpDown.show();
+    }
+  },
+
 
   init: function(){
-    // global
-    this.setSectionIndex();
+    // global event listeners
     this.resizeListener();
+    this.scrollListener();
 
-    //header
-    this.createPattern();
-    //this.headerScrollListener();
-    //this.headerClickListener();
+    // homepage functions
+    this.setSectionIndex();
     this.createMenu();
+    this.addToggleMenuListener();
     this.contentOpacityScroll();
+
+    // homepage header
+    //this.createPattern();
     this.jumpDownListener();
 
-    // contact section
+    this.hideBlogPosts();
+
+    // more friendly textarea
     this.convertTab();
-  }
+  },
+
+  // helper method for the section headers
+  setSectionIndex: function(){
+    var index = 0;
+    $('.container section').each(function(i){
+      if($(this).css('display') === "none"){
+        return;
+      }
+      var $header = $(this).find("header")
+      var title = $header.text();
+      $header.html("<h4><span>0"+index+" :</span>"+title+"</h4>");
+      index++;
+    });
+  },
+
+  jumpDownListener: function(){
+    var _this = this;
+    $("#mainHeader .jumpDown").on('click', function(){
+      var offset = $(".container section:first-of-type").offset().top;
+      $("html,body").animate({scrollTop: offset});
+      //$('#mainHeader').css("height", _this.preferedHeaderSize);
+    });
+  },
+
+
+
+  // more user friendly <textarea></textarea>
+  // http://stackoverflow.com/questions/6140632/how-to-handle-tab-in-textarea
+  convertTab: function(){
+    $(".contact textarea").keydown(function(e) {
+      if(e.keyCode === 9) { // tab was pressed
+        // get caret position/selection
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+        var $this = $(this);
+        var value = $this.val();
+        // set textarea value to: text before caret + tab + text after caret
+        $this.val(value.substring(0, start)
+                    + "\t"
+                    + value.substring(end));
+        // put caret at right position again (add one for the tab)
+        this.selectionStart = this.selectionEnd = start + 1;
+        // prevent the focus lose
+        e.preventDefault();
+      }
+    });
+  },
+
 }
 
 

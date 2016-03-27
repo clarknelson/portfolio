@@ -26,7 +26,13 @@
 <body class="home-page">
 
   <div id="mainMenu">
-    <div class="menu--root"></div>
+    <button class="hamburger hamburger--squeeze" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="menu__root closed"></div>
+    <div class="menu__overlay"></div>
     <!--<iframe width="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/220899357&amp;color=3b4b7f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe> -->
     <!-- <iframe width="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/238528206&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe> -->
     <!-- <iframe width="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177646099&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe> -->
@@ -54,116 +60,43 @@
 
   <main class="container">
     <section class="about" data-index="0">
-      <header>
-        <h4> <span></span>: About </h4>
-      </header>
+      <header> About </header>
+      <!-- <h4> <span></span>: About </h4> -->
       <div class="grid">
         <div class="left">
           <p>
-            I am a 24 year old senior finishing my BS in Computer Science at DePaul University.
+            I am a 24 year old developer almost finished with my BS in Computer Science from DePaul University.
             I have been studying web application design and development for about five years.
             I love to solve problems and find simple solutions in complicated environments.
             <!-- You can learn more about my skills and experience on my resume. <a href="./resume.pdf" target="_blank">https://clarknelson.com/resume.pdf</a> -->
             <!--I enjoy finding new fonts for my collection and adding books to my library. In my free time I like to try new restaurants and skateboard around the city. -->
           </p>
-
-          <!--
-          <div class="item">
-            <h3>Experience</h3>
-            <ul class="experience list">
-              <li> Lead developer at <a href="http://teampixl.com/" target="_blank">Pixl LLC.</a> (June 2015 - January 2016) </li>
-              <li> Freelance Developer (December 2014 - June 2015) </li>
-              <li> Intern at <a href="http://www.neotericdesign.com/" target="_blank">Neoteric Design</a> (May 2014 - June 2014) </li>
-              <li> Intern at <a href="http://www.plumtreegroup.net/" target="_blank">Plum Tree Group</a> (May 2013 - July 2013) </li>
-            </ul>
-          </div>
-        -->
-        <!--
           <div class="item">
             <h3>Education</h3>
             <ul class="education list">
-              <li> Computer Science Student at <a href="http://www.cdm.depaul.edu/academics/Pages/BSinComputerScience.aspx" target="_blank">DePaul University</a> (August 2014 - April 2016)
-                <ul> <li> Agile Development </li> <li> Discrete Math II </li> <li> Systems Programming II </li> <li> Ethics in Technology </li> </ul>
-              </li>
-              <li> Design Student at <a href="http://designation.io/" target="_blank">Designation</a> (June 2014 - August 2014) </li>
-              <li> Computer Science Student at <a href="http://www.cs.siu.edu/" target="_blank">Southern Illinois Carbondale</a> (August 2010 - June 2014)
-                <ul> <li> Theory of Programming Languages </li> <li> Systems Programming I </li> <li> Design Minor </li> </ul>
-              </li>
+              <li> Computer Science Student at <a href="http://www.cdm.depaul.edu/academics/Pages/BSinComputerScience.aspx" target="_blank">DePaul University</a> <span>(August 2014 - Current)</span></li>
+              <li> Bootcamp Student at <a href="http://designation.io/" target="_blank">Designation.io</a> <span>(June 2014 - August 2014)</span></li>
+              <li> Computer Science Student at <a href="http://www.cs.siu.edu/" target="_blank">SIUC</a> <span>(August 2010 - June 2014)</span></li>
             </ul>
           </div>
-        -->
+          <div class="item">
+            <h3>Experience</h3>
+            <ul class="experience list">
+              <li> Lead developer at <a href="http://teampixl.com/" target="_blank">Pixl LLC.</a> <span>(June 2015 - Current)</span></li>
+              <li> Freelance WordPress Developer <span>(December 2014 - June 2015)</span></li>
+              <li> Intern at <a href="http://www.neotericdesign.com/" target="_blank">Neoteric Design</a> <span>(May 2014 - June 2014)</span></li>
+              <li> Intern at <a href="http://www.plumtreegroup.net/" target="_blank">Plum Tree Group</a> <span>(May 2013 - July 2013)</span></li>
+            </ul>
+          </div>
         </div>
         <div class="right">
-
-          <!-- <img class="profile-pic" src="./dist/imgs/about/profile4.jpg"> -->
+          <img class="profile-pic" src="./dist/imgs/about/profile4.jpg">
         </div>
       </div>
     </section>
 
     <section class="work" data-index="1">
-      <header>
-        <h4> <span></span>: Work </h4>
-      </header>
-
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">iQ7</h2>
-          <a class="website-link" href="./src/imgs/work/iq7Full.png" target="_blank" style="text-decoration: line-through">Private Software (screenshot only)</a>
-          <p class="website-description">
-            This was the largest project i've worked on to date, with eight to twelve other team members across the globe.
-            I learned a lot about Javascript ES6, React.js, and Agile Development practices while working on their enterprise bankruptcy lawyer application.
-          </p>
-          <ul class="website-details">
-            <li> <strong>Client:</strong> Pixl, Olofson Technology </li>
-            <li> <strong>Date:</strong> Summer 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development </li>
-            <li> <strong>Technology:</strong> React.js, JavaScript ES6, HTML/CSS, Jira </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="./src/imgs/work/iq7Full.png" target="_blank"><img class="example" src="./dist/imgs/work/iq7.png"></a>
-        </div>
-      </div>
-
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">Shopping.gives</h2>
-          <a class="website-link" href="http://shopping.gives/" target="_blank">Visit Website</a>
-          <p class="website-description">
-            Shopping gives is a new approach to fundraising, modeled after other crowd funding sites like kickstarter.
-            Only the landing page is available to the public, but I also developed a storefront to display products and a user management dashboard.
-          </p>
-          <ul class="website-details">
-            <li> <strong>Client:</strong> Pixl, Shopping.gives </li>
-            <li> <strong>Date:</strong> Fall 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development </li>
-            <li> <strong>Technology:</strong> HTML/SCSS, JavaScript, Gulp </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="http://shopping.gives/" target="_blank"><img class="example" src="./dist/imgs/work/shoppingGives.png"></a>
-        </div>
-      </div>
-
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">Matterchicago.com</h2>
-          <a class="website-link" href="http://matter-dev.com" target="_blank">Visit Website</a>
-          <p class="website-description">
-            Matter is a startup incubator for healthcare companies located in the Merchandise Mart.
-            <!-- I worked within a short timeline to deliver this eight page webpage before the new year. -->
-          </p>
-          <ul class="website-details">
-            <li> <strong>Client:</strong> Pixl, Idea Booth, Matter </li>
-            <li> <strong>Date:</strong> Winter 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development </li>
-            <li> <strong>Technology:</strong> HTML/CSS, JavaScript, Gulp </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="http://matter-dev.com" target="_blank"><img class="example" src="./dist/imgs/work/matter.png"></a>
-        </div>
-      </div>
+      <header> Websites </header>
 
       <div class="grid item">
         <div class="left">
@@ -177,7 +110,7 @@
             <li> <strong>Client:</strong> Personal site </li>
             <li> <strong>Date:</strong> Winter 2014 </li>
             <li> <strong>Role:</strong> Design and Development </li>
-            <li> <strong>Technology:</strong> Meteor, HTML/CSS </li>
+            <!-- <li> <strong>Technology:</strong> Meteor, HTML/CSS </li> -->
           </ul>
         </div>
         <div class="right">
@@ -185,7 +118,71 @@
         </div>
       </div>
 
+      <div class="grid item">
+        <div class="left">
+          <h2 class="website-name">Shopping.gives</h2>
+          <a class="website-link" href="http://shopping.gives/" target="_blank">Visit Website</a>
+          <p class="website-description">
+            Shopping gives is a new approach to fundraising, modeled after other crowd funding sites like kickstarter.
+            Only the landing page is available to the public, but I also developed a storefront to display products and a user management dashboard.
+          </p>
+          <ul class="website-details">
+            <li> <strong>Client:</strong> Shopping.gives </li>
+            <li> <strong>Date:</strong> Fall 2015 </li>
+            <li> <strong>Role:</strong> Front-End Development, Creative </li>
+            <!-- <li> <strong>Technology:</strong> HTML/SCSS, JavaScript, Gulp </li> -->
+          </ul>
+        </div>
+        <div class="right">
+          <a href="http://shopping.gives/" target="_blank"><img class="example" src="./dist/imgs/work/shoppingGives.png"></a>
+        </div>
+      </div>
 
+      <div class="grid item">
+        <div class="left">
+          <h2 class="website-name">iQ7</h2>
+          <a class="website-link" href="./src/imgs/work/iq7Full.png" target="_blank" style="text-decoration: line-through">Preview Only</a>
+          <p class="website-description">
+            This was the largest project i've worked on to date, with eight to twelve other team members across the globe.
+            I learned a lot about Javascript ES6, React.js, and Agile Development practices while working on their enterprise bankruptcy lawyer application.
+          </p>
+          <ul class="website-details">
+            <li> <strong>Client:</strong> Olofson Technology </li>
+            <li> <strong>Date:</strong> Summer 2015 </li>
+            <li> <strong>Role:</strong> Front-End Development </li>
+            <!-- <li> <strong>Technology:</strong> React.js, JavaScript ES6, HTML/CSS, Jira </li> -->
+          </ul>
+        </div>
+        <div class="right">
+          <a href="./src/imgs/work/iq7Full.png" target="_blank"><img class="example" src="./dist/imgs/work/iq7.png"></a>
+        </div>
+      </div>
+
+      <p class="center">
+        Other work samples are available upon request.
+      </p>
+
+      <!--
+      <div class="grid item">
+        <div class="left">
+          <h2 class="website-name">Matterchicago.com</h2>
+          <a class="website-link" href="http://matter-dev.com" target="_blank">Visit Website</a>
+          <p class="website-description">
+            Matter is a startup incubator for healthcare companies located in the Merchandise Mart.
+            I worked within a short timeline to deliver this eight page webpage before the new year.
+          </p>
+          <ul class="website-details">
+            <li> <strong>Client:</strong> Pixl, Idea Booth, Matter </li>
+            <li> <strong>Date:</strong> Winter 2015 </li>
+            <li> <strong>Role:</strong> Front-End Development </li>
+            <li> <strong>Technology:</strong> HTML/CSS, JavaScript, Gulp </li>
+          </ul>
+        </div>
+        <div class="right">
+          <a href="http://matter-dev.com" target="_blank"><img class="example" src="./dist/imgs/work/matter.png"></a>
+        </div>
+      </div>
+      -->
 
       <!--
       <div class="grid item">
@@ -226,6 +223,209 @@
       </div> -->
     </section>
 
+    <section class="blog" data-index="2">
+      <header>
+        Writing
+      </header>
+
+
+      <div class="post">
+        <div class="post__header">
+          <h3>How to build a website</h3>
+          <div class="grid">
+            <div class="left">
+              <i>
+                I'm an advocate for Agile principles and methodologies.
+                I believe that communication is key to creating great products.
+                My process is always evolving and I love to experiment with new technologies.
+                I've documented my process here in the hopes of teaching more people the wonderful art of web development.
+              </i>
+            </div>
+            <div class="right"></div>
+          </div>
+        </div>
+        <div class="post__content">
+
+
+
+          <div class="grid section">
+            <div class="left">
+              <p class="section__header"><strong>#1.</strong> Communicate ideas in pen and paper. </h4>
+              <p class="description">
+                I use pocket sized notebooks with gridded paper like
+                <a href="http://fieldnotesbrand.com/" target="_blank"> Field Notes </a>
+                to work on content or information architecture.
+                This is also a good time to list any features you expect to implement.
+                List any questions you want answered before moving on.
+              </p>
+            </div>
+            <div class="right">
+              <!-- <img src="./dist/imgs/process/sketch.png"> -->
+            </div>
+          </div>
+          <div class="grid section">
+            <div class="left">
+              <p class="section__header"><strong>#2.</strong> Establish look in Sketch. </p>
+              <p class="description">
+                Size, color, fonts, and hierarchy are much easier to find in a graphic editing program like
+                  <a href="">Sketch</a>
+                than it is in the browser.
+                Sketch is an amazing UI design tool that allows you to experiment with ideas quickly.
+                It also great for exporting assets, so finding pictures and icons at this stage is also important.
+              </p>
+            </div>
+            <div class="right">
+              <!-- <img src="./dist/imgs/process/sketch.png"> -->
+            </div>
+          </div>
+          <div class="grid section">
+            <div class="left">
+              <p class="section__header"><strong>#3.</strong> Develop Front-End in HTML/CSS/JS. </p>
+              <p class="description">
+                Create a static version of the website or interface based on the design.
+                Do not worry about saving or retrieving data yet, just establish how the data will look.
+                I use
+                  <a href="https://atom.io/" target="_blank"> Atom</a> as a text editor alongside iTerm running <a href="http://ohmyz.sh/" target="_blank">ZSH</a>.
+                  I use <a href="http://gulpjs.com/" target="_blank"> Gulp</a> to preform tasks such a compiling SCSS or running a local server.
+                I follow front-end code guidelines as listed on <a href="http://workmanship.io" target="_blank">workmanship.io</a>.
+              </p>
+            </div>
+            <div class="right">
+              <!-- <img src="./dist/imgs/process/sketch.png"> -->
+            </div>
+          </div>
+          <div class="grid section">
+            <div class="left">
+              <p class="section__header"><strong>#4.</strong> Connect and deploy site. </p>
+              <p class="description">
+                I am a fan of Node.js based frameworks like <a href="http://expressjs.com/" target="_blank">Express.js</a>, since JavaScript can then be used for the front-end and back-end.
+                <a href="https://www.meteor.com/" target="_blank">Meteor.js</a> has a cool way of storing and accessing information using <a href="https://www.meteor.com/ddp" target="_blank">DDP</a>, so I like to use it for real-time applications.
+                I use <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> to host most of my websites.
+                If its a simple page, i'll use <a href="https://pages.github.com/" target="_blank">Github Pages</a> instead.
+              </p>
+            </div>
+            <div class="right">
+              <!-- <img src="./dist/imgs/process/sketch.png"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="post">
+        <div class="post__header">
+          <h1>Title of Article</h1>
+          <div class="grid">
+            <div class="left">
+              <i> Test sentence about the article </i>
+            </div>
+            <div class="right"></div>
+          </div>
+        </div>
+
+        <div class="grid section">
+          <div class="left"> </div>
+          <div class="right"> </div>
+        </div>
+      </div> -->
+
+    </section>
+
+    <section class="skills" data-index="3">
+      <header> Skills </header>
+
+      <h3>Development</h3>
+      <div class="grid">
+        <div class="left">
+          <p>
+            I have been studying various types of programming since my sophmore year in college.
+            My school courses teach Java, but I have been facinated with web development.
+            Some of my favorite school courses include Algorithms, Systems Development, and Distributed Systems.
+            I particularly enjoy Front-End Development, but have been learning more about the server and security.
+          </p>
+        </div>
+        <div class="right">
+          <ul>
+            <li> Javascript : <span>React, Node, Gulp</span></li>
+            <li> Markup : <span>HTML5, CSS3,
+              <b title="Block Element Modifier Naming">BEM</b></span></li>
+            <li> Databases : <span>Relational and JSON</span></li>
+            <li> Server : <span>
+              PHP,
+              <b title="WordPress">WP</b>,
+              <b title="Ruby on Rails">RoR</b>,
+              <b title="VPS, SSH, DNS">Basic IT</b>
+            </span></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Design</h3>
+      <div class="grid">
+        <div class="left">
+          <p>
+            I enjoy experimenting with typography, ratios, layout, and animations to create a unique experience.
+            I believe that less is more, and communication between all parties is esential to creating an effective design.
+          </p>
+        </div>
+        <div class="right">
+          <ul>
+            <li> Layout : <span>Typography, Ratio, Color</span></li>
+            <li> Experience : <span>User Testing, Animations</span></li>
+            <li> Illustration : <span> Logos, Branding</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" data-index="4">
+      <header> Contact </header>
+      <div class="grid">
+
+        <div class="left">
+          <h3>Email</h3>
+          <p>
+            I love getting email from new people, shoot me a message with what you think of my site!
+            I am currently looking for Full Time work starting in June 2016.
+          </p>
+          <ul>
+            <li> <a class="email item" href="mailto:mail@clarknelson.com" target="_blank">
+              mail@clarknelson.com </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <h3>Network</h3>
+          <ul>
+            <li> <a class="github item" href="https://github.com/jailbot" target="_blank">
+              github.com/jailbot </a>
+            </li>
+            <li> <a class="linkedin item" href="https://www.linkedin.com/in/clarknelson" target="_blank">
+              linkedin.com/in/clarknelson </a>
+            </li>
+            <li> <a class="twitter item" href="https://twitter.com/chidevdesign" target="_blank">
+              twitter.com/chidevdesign </a>
+            </li>
+            <li> <a class="instagram item" href="https://www.instagram.com/chidevdesign/" target="_blank">
+              instagram.com/chidevdesign </a>
+            </li>
+          </ul>
+          <!-- <h2>Questions?</h2> -->
+          <!-- <p> I would love to hear from you! </p>
+          <form accept-charset="UTF-8" action="https://formkeep.com/f/1a001a34fd86" method="POST">
+            <label> <span>Name</span>
+              <input class="name input" name="name" type="text"  placeholder="...">
+            </label>
+            <label> <span>Your Email</span>
+              <input class="email input" name="email" type="text" placeholder="...">
+            </label>
+            <textarea rows="5" name="message"></textarea>
+            <button type="submit">Submit</button>
+          </form> -->
+
+        </div>
+      </div>
+    </section>
+
     <!--
     <section class="process" data-index="2">
       <header>
@@ -240,7 +440,7 @@
 
       <div class="grid item">
         <div class="left">
-          <p class="headline"><strong>#1.</strong> Communicate ideas in pen and paper. </p>
+          <p class="section__header"><strong>#1.</strong> Communicate ideas in pen and paper. </p>
           <p class="description">
             I use pocket sized notebooks with gridded paper like
             <a href="http://fieldnotesbrand.com/" target="_blank"> Field Notes </a>
@@ -256,7 +456,7 @@
 
       <div class="grid item">
         <div class="left">
-          <p class="headline"><strong>#2.</strong> Establish look in Sketch. </p>
+          <p class="section__header"><strong>#2.</strong> Establish look in Sketch. </p>
           <p class="description">
             Size, color, fonts, and hierarchy are much easier to find in a graphic editing program like
               <a href="">Sketch</a>
@@ -272,7 +472,7 @@
 
       <div class="grid item">
         <div class="left">
-          <p class="headline"><strong>#3.</strong> Develop Front-End in HTML/CSS/JS. </p>
+          <p class="section__header"><strong>#3.</strong> Develop Front-End in HTML/CSS/JS. </p>
           <p class="description">
             Create a static version of the website or interface based on the design.
             Do not worry about saving or retrieving data yet, just establish how the data will look.
@@ -289,7 +489,7 @@
 
       <div class="grid item">
         <div class="left">
-          <p class="headline"><strong>#4.</strong> Connect and deploy site. </p>
+          <p class="section__header"><strong>#4.</strong> Connect and deploy site. </p>
           <p class="description">
             I am a fan of Node.js based frameworks like <a href="http://expressjs.com/" target="_blank">Express.js</a>, since JavaScript can then be used for the front-end and back-end.
             <a href="https://www.meteor.com/" target="_blank">Meteor.js</a> has a cool way of storing and accessing information using <a href="https://www.meteor.com/ddp" target="_blank">DDP</a>, so I like to use it for real-time applications.
@@ -304,49 +504,7 @@
     </section>
   -->
 
-    <section class="contact" data-index="2">
-      <header>
-        <h4> <span></span>: Contact </h4>
-      </header>
-      <div class="grid">
 
-        <div class="left">
-          <!-- <h2>Questions?</h2> -->
-          <!-- <p> I would love to hear from you! </p> -->
-          <form accept-charset="UTF-8" action="https://formkeep.com/f/1a001a34fd86" method="POST">
-            <label> <span>Name</span>
-              <input class="name input" name="name" type="text"  placeholder="...">
-            </label>
-            <label> <span>Your Email</span>
-              <input class="email input" name="email" type="text" placeholder="...">
-            </label>
-            <textarea rows="5" name="message"></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div class="right">
-          <div class="icon-grid">
-            <ul>
-              <li> <a class="email item" href="mailto:mail@clarknelson.com" target="_blank">
-                mail@clarknelson.com </a>
-              </li>
-              <li> <a class="github item" href="https://github.com/jailbot" target="_blank">
-                github.com </a>
-              </li>
-              <li> <a class="linkedin item" href="https://www.linkedin.com/in/clarknelson" target="_blank">
-                linkedin.com </a>
-              </li>
-              <li> <a class="instagram item" href="https://www.instagram.com/chidevdesign/" target="_blank">
-                instagram.com </a>
-              </li>
-              <li> <a class="twitter item" href="https://twitter.com/chidevdesign" target="_blank">
-                twitter.com </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!--
     <section class="photography" data-index="2">

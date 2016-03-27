@@ -1,24 +1,61 @@
 #mainMenu{
   position: fixed;
   opacity: 0;
-  right: 1rem;
+  top: 0;
+  right: 0;
   z-index: 1000;
+  min-width: 10px;
+  min-height: 10px;
   text-align: right;
+  padding: 1rem;
+  transition: all 0.4s ease-in;
 
-  span{
-    display: block;
-    font-family: $monoFont;
-    opacity: 0.75;
-    line-height: 1.5em;
-    cursor: context-menu;
-
-    &:hover{
-      opacity: 1;
-    }
+  &.is-active{
+    min-width: 100%;
+    min-height: 100%;
   }
 
-  @media screen and (max-width: 800px){
-    display: none;
+  .hamburger{
+    position: relative;
+    z-index: 100;
+  }
+  .menu__root{
+    position: absolute;
+    right: 1rem;
+    z-index: 100;
+    max-height: 500px;
+    max-width: 300px;
+    padding-right: 1rem;
+    overflow: hidden;
+    transition: all 0.4s;
+    opacity: 1;
+
+    h4{
+      display: block;
+      cursor: pointer;
+      font-family: $monoFont;
+      span{
+        color: $grey;
+      }
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    &.closed{
+      max-width: 0;
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+  .menu__overlay{
+    position: absolute;;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background;
+    opacity: 0.7;
+    z-index: 50;
   }
 }
 
@@ -59,7 +96,7 @@
   }
   .left{
     flex: 1 1 62%;
-    margin-right: 25px;
+    margin-right: 1rem;
 
     @media screen and (max-width: 800px){
       margin-right: 0;
@@ -67,17 +104,13 @@
   }
   .right{
     flex: 1 1 38%;
-    margin-left: 25px;
+    margin-left: 1rem;
 
     @media screen and (max-width: 800px){
       margin-left: 0;
-      margin-top: 25px;
     }
     img{
       width: 100%;
-      box-shadow: 0 2px 8px hsla(0,0%,10%,0.4);
-      transition: all 0.2s;
-
     }
   }
 }
