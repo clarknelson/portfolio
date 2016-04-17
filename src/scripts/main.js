@@ -31,6 +31,23 @@ var home = {
     $("#mainHeader").append(pattern.canvas());
   },
 
+  headerHoverEffect: function(){
+    //window.alert("hello world");
+
+    
+    var size = "750px";
+    var firstColor = "#9600FF";
+    var secondColor = "#003870";
+    $("#mainHeader").mousemove(function(e){
+      var background = "radial-gradient("+size+" at "+e.pageX+"px "+e.pageY+"px , "+firstColor+" 0%, "+secondColor+" 100%)";
+      $("#mainHeader .mask").css({
+        background: background
+      });
+      //console.log(background);
+    });
+
+  },
+
 
 
   createMenu: function(){
@@ -49,8 +66,8 @@ var home = {
       $("html,body").animate({scrollTop: offset});
       //_this.toggleMenu($("#mainMenu .hamburger"));
     });
-
   },
+
 
   addToggleMenuListener: function(){
     var _this = this;
@@ -58,6 +75,7 @@ var home = {
       _this.toggleMenu(this);
     });
   },
+
 
   toggleMenu: function(element){
     $(element).toggleClass("is-active");
@@ -104,7 +122,7 @@ var home = {
   resizeListener: function(){
     var _this = this;
     $(window).resize(function(){
-      _this.createPattern();
+      //_this.createPattern();
       _this.mobile = window.innerWidth <= 800 ? true : false;
       _this.desktop = window.innerWidth > 800 ? true : false;
     });
@@ -140,6 +158,7 @@ var home = {
 
     // homepage header
     //this.createPattern();
+    this.headerHoverEffect();
     this.jumpDownListener();
 
     this.hideBlogPosts();
