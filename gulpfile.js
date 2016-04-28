@@ -28,9 +28,10 @@ gulp.task('imgs', function(){
           progressive: true,
           use: [pngquant(), imageminSvgo(), imageminJpegtran()]
         }))
-        .pipe(gulp.dest('dist/imgs'))
-        .pipe(reload({ stream:true }));
+        .pipe(gulp.dest('dist/imgs'));
 });
+gulp.task('images', ['imgs']);
+
 
 gulp.task("server", function(){
   browserSync.init({
