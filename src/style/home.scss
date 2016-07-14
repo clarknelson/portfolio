@@ -13,7 +13,7 @@
 
   // background: linear-gradient(to bottom, #000, #fff);
   // background: radial-gradient(circle at bottom left, #000, #fff);
-  background: url('../src/imgs/background4.jpeg');
+  background: url('../src/imgs/background7.jpg');
   background-blend-mode: screen;
   background-position: center;
   background-size: cover;
@@ -52,7 +52,7 @@
     opacity: 0.5;
     //background: radial-gradient(500px at 60px 50px , #9600FF 0%, #0028FF 100%);
   }
-  
+
   .jumpDown{
     position: fixed;
     bottom: 3rem;
@@ -83,9 +83,17 @@
     }
   }
 }
+section {
+  .grid{
+    @media screen and (max-width: 800px){
+      display: block;
+    }
+  }
+}
 
 .about{
   padding-top: 5%;
+
   .left{
 
     @media screen and (max-width: 800px){
@@ -93,12 +101,14 @@
     }
 
     h3,h4{
-      padding-top: 1.25rem;
+      margin-top: 1.8rem;
+      opacity: 0.75;
     }
+
     li{
       margin-left: 1em;
       padding-left: 0.8em;
-      padding: 0.32em;
+      padding: 0.3em;
       list-style: disc;
 
       span{
@@ -119,9 +129,11 @@
 
 .skills{
   .right{
+    @media screen and (max-width: 800px){
+      margin-top: 1em;
+    }
     ul{
       padding-left: 22px;
-      padding-top: 0.8em;
     }
     li{
       font-size: 0.8em;
@@ -168,8 +180,9 @@
 
         @media screen and (max-width: 800px){
           width: 62%;
-          padding-left: 1.25em;
+          padding-top: 1.25em;
           padding-bottom: 1.25em;
+          padding-left: 1.25em;
         }
       }
     }
@@ -183,6 +196,11 @@
 
   .item{
     display: block;
+  }
+  @media screen and (max-width: 800px){
+    .right{
+      margin-top: 1.25em;
+    }
   }
 }
 .process{

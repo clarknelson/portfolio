@@ -34,7 +34,6 @@ var home = {
   headerHoverEffect: function(){
     //window.alert("hello world");
 
-    
     var size = "750px";
     var firstColor = "#9600FF";
     var secondColor = "#003870";
@@ -158,7 +157,7 @@ var home = {
 
     // homepage header
     //this.createPattern();
-    this.headerHoverEffect();
+    //this.headerHoverEffect();
     this.jumpDownListener();
 
     this.hideBlogPosts();

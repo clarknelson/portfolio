@@ -329,7 +329,7 @@ textarea {
   z-index: 100;
   border-bottom: 3px solid white;
   box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.8);
-  background: url("../src/imgs/background4.jpeg");
+  background: url("../src/imgs/background7.jpg");
   background-blend-mode: screen;
   background-position: center;
   background-size: cover;
@@ -384,17 +384,22 @@ textarea {
       border-bottom: 2px solid white;
       border-radius: 2px; }
 
+@media screen and (max-width: 800px) {
+  section .grid {
+    display: block; } }
+
 .about {
   padding-top: 5%; }
   @media screen and (max-width: 800px) {
     .about .left {
       padding-left: 0; } }
   .about .left h3, .about .left h4 {
-    padding-top: 1.25rem; }
+    margin-top: 1.8rem;
+    opacity: 0.75; }
   .about .left li {
     margin-left: 1em;
     padding-left: 0.8em;
-    padding: 0.32em;
+    padding: 0.3em;
     list-style: disc; }
     .about .left li span {
       display: block;
@@ -406,9 +411,12 @@ textarea {
     .about .right {
       display: none; } }
 
+@media screen and (max-width: 800px) {
+  .skills .right {
+    margin-top: 1em; } }
+
 .skills .right ul {
-  padding-left: 22px;
-  padding-top: 0.8em; }
+  padding-left: 22px; }
 
 .skills .right li {
   font-size: 0.8em;
@@ -438,8 +446,9 @@ textarea {
     @media screen and (max-width: 800px) {
       .work .grid.item .right img {
         width: 62%;
-        padding-left: 1.25em;
-        padding-bottom: 1.25em; } }
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+        padding-left: 1.25em; } }
   @media screen and (max-width: 800px) {
     .work .grid.item {
       -webkit-flex-direction: column-reverse;
@@ -448,6 +457,10 @@ textarea {
 
 .contact .item {
   display: block; }
+
+@media screen and (max-width: 800px) {
+  .contact .right {
+    margin-top: 1.25em; } }
 
 .process .section-desc {
   max-width: 61.5385%; }
