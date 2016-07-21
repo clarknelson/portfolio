@@ -1,0 +1,2 @@
+git push origin master
+curl -X POST "https://calibreapp.com/api/sites/portfolio-a6b33fa7-b550-45b0-8711-9a72fa7f48ce/snapshots?api_key=2644c0760f867c9f3c8d923c72f04fe1"
