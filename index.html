@@ -34,15 +34,13 @@
     <div class="menu__overlay"></div>
   </div>
 
-  <header id="mainHeader">
+  <header class="hero">
     <div class="grid">
-      <div class="text left">
-        <div class="content">
-          <h1>Clark Nelson</h1>
-          <p>
-            Web Developer and Designer from Chicago, Illinois.
-          </p>
-        </div>
+      <div class="content">
+        <h1 class="huge">Clark Nelson</h1>
+        <p>
+          Web Developer and Designer from Chicago, Illinois.
+        </p>
       </div>
     </div>
     <div class="jumpDown">
@@ -67,20 +65,21 @@
             <!--I enjoy finding new fonts for my collection and adding books to my library. In my free time I like to try new restaurants and skateboard around the city. -->
           </p>
           <div class="item">
-            <h3>Education</h3>
+            <h4>Education</h4>
             <ul class="education list">
-              <li> B.S. Computer Science from <a href="http://www.cdm.depaul.edu/academics/Pages/BSinComputerScience.aspx" target="_blank">DePaul University</a> <span>(August 2014 - Current)</span></li>
-              <li> Bootcamp Student at <a href="http://designation.io/" target="_blank">Designation.io</a> <span>(June 2014 - August 2014)</span></li>
-              <li> Computer Science Student at <a href="http://www.cs.siu.edu/" target="_blank">SIUC</a> <span>(August 2010 - June 2014)</span></li>
+              <li> B.S. Computer Science from <a href="http://www.cdm.depaul.edu/academics/Pages/BSinComputerScience.aspx" target="_blank">DePaul University</a> <span>(August 2014 - June 2016)</span></li>
+              <li> Design Student at <a href="http://designation.io/" target="_blank">Designation.io</a> <span>(June 2014 - August 2014)</span></li>
+              <!-- <li> Computer Science Student at <a href="http://www.cs.siu.edu/" target="_blank">SIUC</a> <span>(August 2010 - June 2014)</span></li> -->
             </ul>
           </div>
           <div class="item">
-            <h3>Experience</h3>
+            <h4>Experience</h4>
             <ul class="experience list">
-              <li> Lead developer at <a href="http://teampixl.com/" target="_blank">Pixl LLC.</a> <span>(June 2015 - Current)</span></li>
+              <li> Freelance Front-end Developer </a> <span>(January 2016 - Current)</span></li>
+              <li> Lead developer at <a href="http://teampixl.com/" target="_blank">Pixl LLC.</a> <span>(June 2015 - January 2016)</span></li>
               <li> Freelance WordPress Developer <span>(December 2014 - June 2015)</span></li>
               <li> Intern at <a href="http://www.neotericdesign.com/" target="_blank">Neoteric Design</a> <span>(May 2014 - June 2014)</span></li>
-              <li> Intern at <a href="http://www.plumtreegroup.net/" target="_blank">Plum Tree Group</a> <span>(May 2013 - July 2013)</span></li>
+              <!-- <li> Intern at <a href="http://www.plumtreegroup.net/" target="_blank">Plum Tree Group</a> <span>(May 2013 - July 2013)</span></li> -->
             </ul>
           </div>
         </div>
@@ -93,18 +92,58 @@
     <section class="work" data-index="1">
       <header> Websites </header>
 
+
+
+      <div class="grid item">
+        <div class="left">
+          <h2 class="website-name">The Exoneration Project</h2>
+          <a class="website-link" href="http://exoneration-project.us" target="_blank">Visit Website</a>
+          <p class="website-description">
+            Informational website to educate visitors about inmates who were falsy conviced.
+            The webpage is currently in development and will be complete August 8th.
+          </p>
+          <ul class="website-details">
+            <li> <strong>Client:</strong> Studio424 </li>
+            <li> <strong>Date:</strong> Summer 2016 </li>
+            <!-- <li> <strong>Technology:</strong> Meteor, HTML/CSS </li> -->
+          </ul>
+        </div>
+        <div class="right">
+          <a href="http://exoneration-project.us" target="_blank"><img class="example" src="./src/imgs/work/ep.png"></a>
+        </div>
+      </div>
+
+      <div class="grid item">
+        <div class="left">
+          <h2 class="website-name">One Seven</h2>
+          <a class="website-link" href="http://weareoneseven.com" target="_blank">Visit Website</a>
+          <p class="website-description">
+            Webpage for a wealth management firm in Beachwood, Ohio.
+            Development was completed within a strict deadline of two weeks.
+          </p>
+          <ul class="website-details">
+            <li> <strong>Client:</strong> IdeaBooth </li>
+            <li> <strong>Date:</strong> Spring 2016 </li>
+            <!-- <li> <strong>Technology:</strong> Meteor, HTML/CSS </li> -->
+          </ul>
+        </div>
+        <div class="right">
+          <a href="http://weareoneseven.com" target="_blank"><img class="example" src="./src/imgs/work/one-seven.png"></a>
+        </div>
+      </div>
+
       <div class="grid item">
         <div class="left">
           <h2 class="website-name">Hsla.online</h2>
           <a class="website-link" href="http://hsla.online/" target="_blank">Visit Website</a>
           <p class="website-description">
-            Created in honor of hue saturation lightness alpha, the most intuitive way to use color.
-            I used reactive variables in Meteor to keep track of each value and added a live feed of other user's colors to the bottom.
+            Fan site created for hue saturation lightness alpha, my favorite way to use color.
+            I used reactive variables in Meteor to keep track of each hsla value and added a live feed of other user's colors to the bottom.
+            Built this site for speed in one night, more work has gone into hosting it than building it.
           </p>
           <ul class="website-details">
             <li> <strong>Client:</strong> Personal site </li>
             <li> <strong>Date:</strong> Winter 2014 </li>
-            <li> <strong>Role:</strong> Design and Development </li>
             <!-- <li> <strong>Technology:</strong> Meteor, HTML/CSS </li> -->
           </ul>
         </div>
@@ -118,13 +157,12 @@
           <h2 class="website-name">Shopping.gives</h2>
           <a class="website-link" href="http://shopping.gives/" target="_blank">Visit Website</a>
           <p class="website-description">
-            Shopping gives is a new approach to fundraising, modeled after other crowd funding sites like kickstarter.
-            Only the landing page is available to the public, but I also developed a storefront to display products and a user management dashboard.
+            Simple landing page I worked with designers to refine over two or three iterations.
+            I really enjoy the subtile tones and I believe it is a great take on a timeless layout.
           </p>
           <ul class="website-details">
             <li> <strong>Client:</strong> Pixl LLC. </li>
             <li> <strong>Date:</strong> Fall 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development, Creative </li>
             <!-- <li> <strong>Technology:</strong> HTML/SCSS, JavaScript, Gulp </li> -->
           </ul>
         </div>
@@ -136,15 +174,15 @@
       <div class="grid item">
         <div class="left">
           <h2 class="website-name">iQ7</h2>
-          <a class="website-link" href="./src/imgs/work/iq7Full.png" target="_blank" style="text-decoration: line-through">Preview Only</a>
+          <a class="website-link" href="./src/imgs/work/iq7Full.png" target="_blank">View Designs</a>
           <p class="website-description">
-            This was the largest project i've worked on to date, with eight to twelve other team members across the globe.
-            I learned a lot about Javascript ES6, React.js, and Agile Development practices while working on their enterprise bankruptcy lawyer application.
+            A web application to help bankruptcy lawyers manage clients and assets.
+            Built in React.js over two months of agile project management workflow with a team across the world.
+            Only the final designs are available to the public, sorry!
           </p>
           <ul class="website-details">
             <li> <strong>Client:</strong> Olofson Technology </li>
             <li> <strong>Date:</strong> Summer 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development </li>
             <!-- <li> <strong>Technology:</strong> React.js, JavaScript ES6, HTML/CSS, Jira </li> -->
           </ul>
         </div>
@@ -152,71 +190,16 @@
           <a href="./src/imgs/work/iq7Full.png" target="_blank"><img class="example" src="./dist/imgs/work/iq7-fs8.png"></a>
         </div>
       </div>
-
-      <p class="center">
-        Other work samples are available upon request.
-      </p>
-
-      <!--
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">Matterchicago.com</h2>
-          <a class="website-link" href="http://matter-dev.com" target="_blank">Visit Website</a>
-          <p class="website-description">
-            Matter is a startup incubator for healthcare companies located in the Merchandise Mart.
-            I worked within a short timeline to deliver this eight page webpage before the new year.
-          </p>
-          <ul class="website-details">
-            <li> <strong>Client:</strong> Pixl, Idea Booth, Matter </li>
-            <li> <strong>Date:</strong> Winter 2015 </li>
-            <li> <strong>Role:</strong> Front-End Development </li>
-            <li> <strong>Technology:</strong> HTML/CSS, JavaScript, Gulp </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="http://matter-dev.com" target="_blank"><img class="example" src="./dist/imgs/work/matter.png"></a>
-        </div>
-      </div>
-      -->
-
-      <!--
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">Ode-to-doge.com</h2>
-          <a class="website-link" href="http://ode-to-doge.com/" target="_blank">Visit Website</a>
-          <p class="website-description">
-            Shiba plz
-          </p>
-          <ul class="website-details">
-            <li> <strong>Date:</strong> Summer 2014 </li>
-            <li> <strong>Role:</strong> Design and Development </li>
-            <li> <strong>Technology:</strong> HTML/CSS, Javascript </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="http://ode-to-doge.com/" target="_blank"><img class="example" src="./dist/imgs/work/ode-to-doge.png"></a>
-        </div>
-      </div> -->
-
-      <!--
-      <div class="grid item">
-        <div class="left">
-          <h2 class="website-name">Siuss.com</h2>
-          <a class="website-link" href="">Visit Website</a>
-          <p class="website-description">
-            At SIUC I was an active member of the skateboard society, I created this site to showcase our group.
-          </p>
-          <ul class="website-details">
-            <li> <strong>Date:</strong> Summer 2014 </li>
-            <li> <strong>Role:</strong> Design and Development </li>
-            <li> <strong>Technology:</strong> HTML/CSS, Javascript, Vimeo </li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href=""><img class="example" src="./dist/imgs/work/siuss.png"></a>
-        </div>
-      </div> -->
     </section>
+    <!--
+    ============================================================================
+    Thanks for reading the source! =============================================
+    Here are a few other website that I am really proud of, but aren't clean or
+    profetional enough to make it to the main site. ============================
+    http://ode-to-doge.com/ ====================================================
+    http://siuss.org/ ==========================================================
+    ============================================================================
+    -->
 
     <section class="skills" data-index="2">
       <header> Skills </header>
@@ -225,23 +208,17 @@
       <div class="grid">
         <div class="left">
           <p>
-            I have been studying the art of programming since my sophmore year in college.
-            My school courses mostly teach Java, but I have been facinated with web development because of the intersection of logic and creativity.
-            Some of my favorite school courses include Algorithms, Systems Development, and Distributed Systems.
+            I have been studying various aspects of the art of programming since my sophmore year in college.
+            My school courses taught Java and other programming concepts such as Algorithms and Object Oriented Programming. But my passion lies in web development because of the intersection of logic and creativity.
           </p>
         </div>
         <div class="right">
           <ul>
-            <li> Javascript : <span>React, Gulp, ES6</span></li>
+            <li> Javascript : <span>React, Express, Node, Gulp</span></li>
             <li> DOM : <span>HTML5, CSS3, SASS</span></li>
-            <li> Server : <span>
-              Node,
-              Python,
-              <b title="WordPress">WP</b>,
-              <b title="VPS, SSH, DNS">IT</b>
-            </span></li>
-            <li> Databases : <span>NoSql</span></li>
-            <li> Systems : <span>Android/iOS, Java</span></li>
+            <li> Server : <span> WordPress, Python, DevOps </span></li>
+            <li> App Development : <span>Android, iOS, React Native</span></li>
+            <li> Systems : <span>Java, C/C++, OOP</span></li>
           </ul>
         </div>
       </div>
@@ -251,14 +228,15 @@
         <div class="left">
           <p>
             I enjoy experimenting with typography, ratios, layout, and animations to create a unique experience.
-            I believe that less is more, and communication between all parties is esential to creating an effective design.
+            Whether I am creating from scratch or implementing a designer's interface, "design thinking" touches every part of my life.
+            I believe that less is more, and communication is esential to creating a successful design.
           </p>
         </div>
         <div class="right">
           <ul>
-            <li> Layout : <span>Typography, Ratio, Color</span></li>
-            <li> Experience : <span>Animation, Preformance, Testing </span></li>
-            <li> Creative : <span> Logo, Brand, Photography</span></li>
+            <li> Layout : <span>Typography, Grids, Ratios, Colors</span></li>
+            <li> User Experience : <span>Animation, Preformance</span></li>
+            <li> Creative : <span> Logos, Branding, Photography</span></li>
           </ul>
         </div>
       </div>
@@ -269,25 +247,23 @@
         Writing
       </header>
 
-
       <div class="post">
         <div class="post__header">
           <h3>How to build a website</h3>
           <div class="grid">
             <div class="left">
-              <i>
-                I'm an advocate for Agile principles and methodologies.
+              <p>
                 I believe that communication is key to creating great products.
                 My process is always evolving and I love to experiment with new technologies.
-                I've documented my process here in the hopes of teaching more people the wonderful art of web development.
-              </i>
+                I've documented my process here in the hopes of teaching more how to make cool websites.
+              </p>
             </div>
-            <div class="right"></div>
+            <div class="right">
+              <p> Click to read more </p>
+            </div>
           </div>
         </div>
         <div class="post__content">
-
-
 
           <div class="grid section">
             <div class="left">
@@ -352,7 +328,9 @@
         </div>
       </div>
 
-      <!-- <div class="post">
+      <!-- Blog post template
+
+      <div class="post">
         <div class="post__header">
           <h1>Title of Article</h1>
           <div class="grid">
@@ -378,11 +356,11 @@
         <div class="left">
           <h3>Email</h3>
           <p>
-            I love getting email from new people, shoot me a message with what you think of my site!
-            I am currently looking for Full Time work starting in June 2016.
+            Reach out and make an introduction, I love hearing from new people and would like to answer your questions.
           </p>
           <ul>
-            <li> <a class="email item" href="mailto:mail@clarknelson.com" target="_blank">
+            <li>
+              <a class="email-link" href="mailto:mail@clarknelson.com" target="_blank">
               mail@clarknelson.com </a>
             </li>
           </ul>

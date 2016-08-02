@@ -27,8 +27,8 @@ var home = {
     });
 
     // take out the old canvas
-    $("#mainHeader canvas").remove()
-    $("#mainHeader").append(pattern.canvas());
+    $("header.hero canvas").remove()
+    $("header.hero").append(pattern.canvas());
   },
 
   headerHoverEffect: function(){
@@ -37,9 +37,9 @@ var home = {
     var size = "750px";
     var firstColor = "#9600FF";
     var secondColor = "#003870";
-    $("#mainHeader").mousemove(function(e){
+    $("header.hero").mousemove(function(e){
       var background = "radial-gradient("+size+" at "+e.pageX+"px "+e.pageY+"px , "+firstColor+" 0%, "+secondColor+" 100%)";
-      $("#mainHeader .mask").css({
+      $("header.hero .mask").css({
         background: background
       });
       //console.log(background);
@@ -135,7 +135,7 @@ var home = {
   },
 
   showHideJumpDown: function(offset){
-    var $jumpDown = $('#mainHeader .jumpDown');
+    var $jumpDown = $('header.hero .jumpDown');
     if(offset > window.innerHeight){
       $jumpDown.hide();
     } else {
@@ -182,10 +182,10 @@ var home = {
 
   jumpDownListener: function(){
     var _this = this;
-    $("#mainHeader .jumpDown").on('click', function(){
+    $("header.hero .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
       $("html,body").animate({scrollTop: offset});
-      //$('#mainHeader').css("height", _this.preferedHeaderSize);
+      //$('header.hero').css("height", _this.preferedHeaderSize);
     });
   },
 

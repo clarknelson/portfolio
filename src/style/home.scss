@@ -1,14 +1,11 @@
 
-
-#mainHeader{
+header.hero{
   position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: 100;
-  border-bottom: 3px solid white;
+  border-bottom: $size-1 solid white;
   box-shadow: 0px 4px 20px hsla(0,0%,10%,0.8);
 
   // background: linear-gradient(to bottom, #000, #fff);
@@ -31,14 +28,18 @@
     transform: translate(-50%, -50%);
   }
 
-  .text{
+  .content{
     color: white;
+    h1,p{
+      text-shadow: 0px 2px 5px hsla(0,0%,0%,0.2);
+    }
     h1{
-      margin-left: -1px;
-      line-height: 1em;
+      margin-left: -2px;
+      line-height: 0.9;
     }
     p{
-      line-height: 1em;
+      font-size: $size1;
+      line-height: 1.2;
     }
   }
 
@@ -50,73 +51,102 @@
     height: 100%;
     z-index: 50;
     opacity: 0.5;
-    //background: radial-gradient(500px at 60px 50px , #9600FF 0%, #0028FF 100%);
+    background: radial-gradient(90vw at 20vw 10vh , #2AA1FF 0%, #FF8A2A 100%);
+    @media screen and (max-width: $siteWidth){
+      background: radial-gradient(100vh at 40vw 40vh , #2AA1FF 0%, #FF8A2A 100%);
+
+    }
   }
 
   .jumpDown{
     position: fixed;
-    bottom: 3rem;
+    bottom: $size3;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     z-index: 1000;
     width: 100%;
     text-align: center;
-    opacity: 0.75;
+    opacity: 1;
     cursor: pointer;
-    transition: all 0.2s;
     color: white;
+    transition: all 0.2s ease-in-out;
 
+    p.jumpDown--message{
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: $size-1;
+    }
     &:hover{
-      opacity: 1;
+      transform: translateX(-50%) scale(1.2);
     }
 
     .jumpDown--arrow{
-      $size: 24px;
+      $size: $size2;
+      $border: 3px;
       position: relative;
       left: 50%;
       width: $size;
       height: $size;
       transform: translateX(-55%) rotate(45deg);
-      border-right: 2px solid white;
-      border-bottom: 2px solid white;
-      border-radius: 2px;
+      border-right: $border solid white;
+      border-bottom: $border solid white;
+      border-radius: $border;
     }
   }
 }
+
+
 section {
+
+  margin: 8% 0;
   .grid{
     @media screen and (max-width: 800px){
       display: block;
     }
   }
+
+  header{
+    opacity: 0.5;
+    padding-bottom: $size-2;
+    margin-bottom: $size2;
+    border-bottom: 1px solid $off-white;
+
+    h4{
+      font-family: $monoFont;
+      font-size: $size-1;
+      line-height: 1;
+      font-weight: 900;
+      color: $off-white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
 }
 
 .about{
-  padding-top: 5%;
-
+  margin-top: 20vh;
   .left{
-
     @media screen and (max-width: 800px){
       padding-left: 0;
     }
 
     h3,h4{
-      margin-top: 1.8rem;
-      opacity: 0.75;
+      margin: $size0 0 $size-3;
+
     }
 
     li{
-      margin-left: 1em;
-      padding-left: 0.8em;
-      padding: 0.3em;
-      list-style: disc;
+      margin-left: $size2;
+      margin-bottom: $size-2;
+      padding-left: $size0;
+      list-style: square;
 
       span{
         display: block;
-        font-size: 0.64rem;
-        line-height: 120%;
-        color: $off-white;
-        opacity: 0.75;
+        font-size: $size-1;
+        color: $white;
+        opacity: 0.5;
+        margin-top: $size-3;
       }
     }
   }
@@ -127,48 +157,29 @@ section {
   }
 }
 
-.skills{
-  .right{
-    @media screen and (max-width: 800px){
-      margin-top: 1em;
-    }
-    ul{
-      padding-left: 22px;
-    }
-    li{
-      font-size: 0.8em;
-      list-style: disc;
-      span{
-        color: $grey;
-      }
-      b{
-        cursor: help;
-        font-weight: inherit;
-      }
-    }
-  }
-}
-
-.work{
+section.work{
   .grid.item{
     border-left: 1px solid $off-white;
 
     .left{
       overflow: hidden;
-      padding-left: 1.25rem;
+      padding-left: $size2;
       .website-name{
 
       }
       .website-link{
         display: block;
-        margin-bottom: 0.8em;
+        margin-bottom: $size0;
       }
       .website-description{
-        margin-bottom: 1.25em;
+        margin-bottom: $size0;
       }
       .website-details{
+        li{
+          line-height: 1.5;
+        }
         strong{
-          font-weight: 500;
+          font-weight: 700;
         }
       }
     }
@@ -176,13 +187,10 @@ section {
       img{
         width: 100%;
         box-shadow: 0 2px 8px hsla(0,0%,10%,0.5);
-        transition: all 0.2s;
 
         @media screen and (max-width: 800px){
-          width: 62%;
-          padding-top: 1.25em;
-          padding-bottom: 1.25em;
-          padding-left: 1.25em;
+          width: 90%;
+          margin: $size2;
         }
       }
     }
@@ -192,47 +200,55 @@ section {
   }
 }
 
-.contact{
 
-  .item{
-    display: block;
-  }
-  @media screen and (max-width: 800px){
-    .right{
-      margin-top: 1.25em;
+section.skills{
+  .right{
+    ul{
+      padding-left: $size0;
+    }
+    li{
+      font-size: $size-1;
+      list-style: disc;
+      margin-bottom: $size-2;
+
+      span{
+        opacity: 0.5;
+      }
+      b{
+        cursor: help;
+        font-weight: inherit;
+      }
     }
   }
 }
-.process{
-  .section-desc{
-    max-width: 61.5385%;
-    @media screen and (max-width: 800px){
-      max-width: 100%;
-    }
-  }
-
-  .grid.item{
-    margin-top: 40px;
-
-    .headline{
-      font-family: "Saturn", "AnonymousPro", sans-serif;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-  }
-}
-
 
 
 .blog{
-  .grid{
-    margin-bottom: 0;
-    padding: 0.9765em 0;
-  }
   .post{
     display: block;
     .post__header{
       cursor: pointer;
+
+      .grid{
+        .left{
+          p{
+
+          }
+        }
+        .right{
+          position: relative;
+
+          p{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: $size-1;
+            font-weight: bold;
+            font-family: $displayFont;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
 
     .post__content{
@@ -241,13 +257,38 @@ section {
     }
 
     .section__header{
-      font-size: 1.25rem;
+      font-weight: 900;
+      font-size: $size1;
+      margin-bottom: $size-3;
 
       strong{
-        font-weight: 500;
-        font-size: 1rem;
-        color: $grey;
+        font-size: $size-1;
+        opacity: 0.5;
       }
+    }
+  }
+}
+
+.contact{
+  .item{
+    display: block;
+  }
+
+  a.email-link{
+    display: block;
+    font-size: $size1;
+
+    margin: $size0 0;
+  }
+
+  .right{
+    li{
+      margin: $size-2 0;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .right{
+      //margin-top: 1.25em;
     }
   }
 }
