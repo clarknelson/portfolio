@@ -13,10 +13,11 @@ gulp.task('scss', function() {
   gulp.src('src/style/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-  			browsers: ['last 2 versions'],
+  			browsers: ['last 5 versions'],
   			cascade: false
   		}))
     .pipe(gulp.dest('./dist'));
+  browserSync.reload();
 });
 
 gulp.task('js', function(){});
