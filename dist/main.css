@@ -188,7 +188,7 @@
   font-style: italic; }
 
 body {
-  font-family: "Helvetica", "Affogato", "Overlook", "Roboto", "Saturn", "Manifold", sans-serif;
+  font-family: "Overlook", Helvetica, "Affogato", "Roboto", "Saturn", "Manifold", sans-serif;
   font-weight: 300;
   color: #f8f8f8;
   background: #222426;
