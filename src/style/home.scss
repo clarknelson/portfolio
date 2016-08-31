@@ -237,13 +237,12 @@ section.skills{
         }
         .right{
           position: relative;
-
           p{
             position: absolute;
             bottom: 0;
             width: 100%;
             font-size: $size-1;
-            font-weight: bold;
+            font-weight: 500;
             font-family: $displayFont;
             text-transform: uppercase;
           }

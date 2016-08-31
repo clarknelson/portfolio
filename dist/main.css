@@ -425,7 +425,7 @@ section.skills .right li {
         bottom: 0;
         width: 100%;
         font-size: 0.75em;
-        font-weight: bold;
+        font-weight: 500;
         font-family: "Venera", "Manifold Display", sans-serif;
         text-transform: uppercase; }
   .blog .post .post__content {
