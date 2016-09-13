@@ -5,48 +5,6 @@ var home = {
   mobile: window.innerWidth <= 800 ? true : false,
   desktop: window.innerWidth > 800 ? true : false,
 
-  createPattern: function(){
-
-    // more options: http://bl.ocks.org/mbostock/5577023
-    var colors = [
-      //'YlOrRd',
-      //'YlOrBr',
-      'Greys',
-      //'Spectral'
-    ];
-    var xColor = Math.floor(Math.random() * colors.length);
-
-    var cellSize = 102;
-    var pattern = Trianglify({
-      // api options
-      // http://qrohlf.com/trianglify/
-      width: window.innerWidth + 100,
-      height: window.innerHeight + 100,
-      cell_size: cellSize,
-      x_colors: colors[xColor]
-    });
-
-    // take out the old canvas
-    $("header.hero canvas").remove()
-    $("header.hero").append(pattern.canvas());
-  },
-
-  headerHoverEffect: function(){
-    //window.alert("hello world");
-
-    var size = "750px";
-    var firstColor = "#9600FF";
-    var secondColor = "#003870";
-    $("header.hero").mousemove(function(e){
-      var background = "radial-gradient("+size+" at "+e.pageX+"px "+e.pageY+"px , "+firstColor+" 0%, "+secondColor+" 100%)";
-      $("header.hero .mask").css({
-        background: background
-      });
-      //console.log(background);
-    });
-
-  },
-
 
 
   createMenu: function(){
@@ -121,7 +79,6 @@ var home = {
   resizeListener: function(){
     var _this = this;
     $(window).resize(function(){
-      //_this.createPattern();
       _this.mobile = window.innerWidth <= 800 ? true : false;
       _this.desktop = window.innerWidth > 800 ? true : false;
     });
@@ -156,14 +113,8 @@ var home = {
     this.contentOpacityScroll();
 
     // homepage header
-    //this.createPattern();
-    //this.headerHoverEffect();
     this.jumpDownListener();
-
     this.hideBlogPosts();
-
-    // more friendly textarea
-    this.convertTab();
   },
 
   // helper method for the section headers
@@ -185,31 +136,6 @@ var home = {
     $("header.hero .jumpDown").on('click', function(){
       var offset = $(".container section:first-of-type").offset().top;
       $("html,body").animate({scrollTop: offset});
-      //$('header.hero').css("height", _this.preferedHeaderSize);
-    });
-  },
-
-
-
-  // more user friendly <textarea></textarea>
-  // http://stackoverflow.com/questions/6140632/how-to-handle-tab-in-textarea
-  convertTab: function(){
-    $(".contact textarea").keydown(function(e) {
-      if(e.keyCode === 9) { // tab was pressed
-        // get caret position/selection
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
-        var $this = $(this);
-        var value = $this.val();
-        // set textarea value to: text before caret + tab + text after caret
-        $this.val(value.substring(0, start)
-                    + "\t"
-                    + value.substring(end));
-        // put caret at right position again (add one for the tab)
-        this.selectionStart = this.selectionEnd = start + 1;
-        // prevent the focus lose
-        e.preventDefault();
-      }
     });
   },
 
